@@ -27,25 +27,22 @@ behavior:"smooth"
 // Create particles
 
 
-const particles = document.getElementById("particles");
+window.addEventListener("load", () => {
 
-const fragment = document.createDocumentFragment();
+const particles = document.getElementById("particles");
 
 for(let i = 0; i < 80; i++){
 
-    let particle = document.createElement("div");
+    const particle = document.createElement("div");
 
     particle.className = "particle";
 
-    particle.style.left = Math.random() * 100 + "%";
+    particle.style.left = Math.random()*100 + "%";
+    particle.style.animationDuration = (5 + Math.random()*10) + "s";
+    particle.style.animationDelay = Math.random()*5 + "s";
 
-    particle.style.animationDuration =
-        (5 + Math.random() * 10) + "s";
+    particles.appendChild(particle);
 
-    particle.style.animationDelay =
-        Math.random() * 5 + "s";
-
-    fragment.appendChild(particle);
 }
 
-particles.appendChild(fragment);
+});
