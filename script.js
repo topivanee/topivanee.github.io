@@ -39,7 +39,7 @@ for(let i = 0; i < 80; i++){
 
     particle.style.left = Math.random()*100 + "%";
     particle.style.animationDuration = (5 + Math.random()*10) + "s";
-    particle.style.animationDelay = Math.random()*5 + "s";
+    particle.style.animationDelay = "0s";
 
     particles.appendChild(particle);
 
