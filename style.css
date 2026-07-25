@@ -5,7 +5,7 @@ padding:0;
 
 box-sizing:border-box;
 
-font-family:Arial;
+font-family:Arial, sans-serif;
 
 scroll-behavior:smooth;
 
@@ -66,7 +66,8 @@ background-position:0% 50%;
 
 
 
-/* GRID */
+
+/* GRID BACKGROUND */
 
 
 body::before{
@@ -141,6 +142,7 @@ transform:translateY(50px);
 
 
 
+
 /* NAVIGATION */
 
 
@@ -180,6 +182,7 @@ gap:30px;
 
 
 box-shadow:
+
 0 0 25px #a855ff;
 
 
@@ -226,6 +229,11 @@ text-shadow:
 
 
 
+
+
+/* SECTIONS */
+
+
 section{
 
 
@@ -245,7 +253,7 @@ align-items:center;
 
 
 
-padding:50px;
+padding:80px 50px;
 
 
 
@@ -258,6 +266,9 @@ h1{
 
 
 font-size:60px;
+
+
+text-align:center;
 
 
 }
@@ -283,7 +294,7 @@ text-shadow:
 h2{
 
 
-margin-top:20px;
+margin-top:15px;
 
 
 }
@@ -308,10 +319,17 @@ color:#ccc;
 margin-top:20px;
 
 
+line-height:1.6;
+
+
 }
 
 
 
+
+
+
+/* BUTTON */
 
 
 button{
@@ -351,6 +369,24 @@ box-shadow:
 cursor:pointer;
 
 
+transition:.3s;
+
+
+}
+
+
+
+button:hover{
+
+
+transform:scale(1.05);
+
+
+box-shadow:
+
+0 0 50px #a855ff;
+
+
 }
 
 
@@ -359,35 +395,52 @@ cursor:pointer;
 
 
 
-/* CARDS */
+
+/* WORK CARDS */
 
 
 .cards{
 
 
-display:flex;
+display:grid;
 
 
-gap:30px;
+grid-template-columns:
+
+repeat(auto-fit,minmax(320px,1fr));
+
+
+
+gap:35px;
+
 
 
 margin-top:50px;
 
 
+
+width:90%;
+
+
+
+max-width:1200px;
+
+
 }
+
+
 
 
 
 .card{
 
 
-width:300px;
+padding:25px;
 
 
-padding:30px;
+background:
 
-
-background:#10002b;
+rgba(16,0,43,.85);
 
 
 
@@ -410,14 +463,23 @@ box-shadow:
 transition:.3s;
 
 
+
+backdrop-filter:blur(10px);
+
+
+
 }
+
+
 
 
 
 .card:hover{
 
 
-transform:translateY(-15px);
+transform:
+
+translateY(-15px);
 
 
 
@@ -434,7 +496,79 @@ box-shadow:
 
 
 
-/* CUBES */
+/* YOUTUBE VIDEOS */
+
+
+.card iframe{
+
+
+width:100%;
+
+
+height:190px;
+
+
+
+border:none;
+
+
+
+border-radius:15px;
+
+
+
+margin-bottom:20px;
+
+
+
+box-shadow:
+
+0 0 25px #a855ff;
+
+
+}
+
+
+
+
+
+
+
+/* GITHUB LINK */
+
+
+#contact a{
+
+
+color:#a855ff;
+
+
+text-decoration:none;
+
+
+}
+
+
+
+#contact a:hover{
+
+
+text-shadow:
+
+0 0 15px #a855ff;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* FLOATING CUBES */
 
 
 .cubes span{
@@ -545,7 +679,9 @@ animation-delay:10s;
 0%{
 
 transform:
+
 translateY(0)
+
 rotate(0deg);
 
 opacity:.2;
@@ -557,7 +693,9 @@ opacity:.2;
 50%{
 
 transform:
+
 translateY(-100px)
+
 rotate(180deg);
 
 
@@ -570,7 +708,9 @@ opacity:1;
 100%{
 
 transform:
+
 translateY(0)
+
 rotate(360deg);
 
 
@@ -580,6 +720,7 @@ opacity:.2;
 
 
 }
+
 
 
 
@@ -682,6 +823,52 @@ translateY(-20vh);
 
 opacity:0;
 
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+h1{
+
+font-size:40px;
+
+}
+
+
+.cards{
+
+grid-template-columns:1fr;
+
+width:100%;
+
+}
+
+
+nav{
+
+gap:15px;
+
+padding:12px 20px;
+
+}
+
+
+.card iframe{
+
+height:170px;
 
 }
 
