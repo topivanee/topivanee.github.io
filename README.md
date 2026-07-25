@@ -1,2 +1,0 @@
-# IvaneTopp.github.io
-portfolio
