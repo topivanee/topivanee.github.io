@@ -64,7 +64,35 @@ background-position:0% 50%;
 }
 
 
+.about-image{
 
+width:220px;
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+margin-top:40px;
+
+border:3px solid #a855ff;
+
+box-shadow:
+0 0 30px #a855ff;
+
+transition:.3s;
+
+}
+
+
+.about-image:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 50px #a855ff;
+
+}
 
 
 /* GRID BACKGROUND */
