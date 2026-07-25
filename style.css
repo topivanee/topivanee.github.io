@@ -281,7 +281,7 @@ top:20%;
 left:80%;
 top:30%;
 
-
+animation-delay: 2s;
 
 }
 
@@ -291,7 +291,7 @@ top:30%;
 left:40%;
 top:70%;
 
-
+animation-delay: 4s;
 
 }
 
@@ -301,7 +301,7 @@ top:70%;
 left:70%;
 top:80%;
 
-
+animation-delay: 6s;
 
 }
 
@@ -311,7 +311,7 @@ top:80%;
 left:20%;
 top:60%;
 
-
+animation-delay: 8s;
 }
 
 
@@ -320,7 +320,7 @@ top:60%;
 left:90%;
 top:10%;
 
-
+animation-delay: 10s;
 }
 
 
