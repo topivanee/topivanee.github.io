@@ -1,41 +1,192 @@
 *{
+
 margin:0;
 padding:0;
+
 box-sizing:border-box;
+
 font-family:Arial;
+
 scroll-behavior:smooth;
+
 }
+
 
 
 body{
 
-background:#050014;
+
+background:
+
+linear-gradient(
+120deg,
+#050014,
+#14002b,
+#001b3a,
+#050014
+);
+
+
+background-size:400% 400%;
+
+
+animation:gradientMove 15s ease infinite;
+
+
 color:white;
+
+
+overflow-x:hidden;
+
 
 }
 
 
 
-nav{
+@keyframes gradientMove{
+
+
+0%{
+background-position:0% 50%;
+}
+
+
+50%{
+background-position:100% 50%;
+}
+
+
+100%{
+background-position:0% 50%;
+}
+
+
+}
+
+
+
+
+/* GRID */
+
+
+body::before{
+
+
+content:"";
+
 
 position:fixed;
+
+
+inset:0;
+
+
+
+background-image:
+
+
+linear-gradient(
+rgba(168,85,247,.08) 1px,
+transparent 1px
+),
+
+
+linear-gradient(
+90deg,
+rgba(168,85,247,.08) 1px,
+transparent 1px
+);
+
+
+
+background-size:50px 50px;
+
+
+
+animation:gridMove 8s linear infinite;
+
+
+
+pointer-events:none;
+
+
+z-index:-2;
+
+
+}
+
+
+
+@keyframes gridMove{
+
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(50px);
+
+}
+
+
+}
+
+
+
+
+
+
+/* NAVIGATION */
+
+
+nav{
+
+
+position:fixed;
+
+
 top:20px;
+
+
 left:50%;
+
+
 transform:translateX(-50%);
+
+
 
 background:#09001f;
 
+
+
 padding:15px 30px;
+
+
 
 border-radius:50px;
 
-box-shadow:
-0 0 20px #8a2be2;
+
 
 display:flex;
+
+
 gap:30px;
 
+
+
+box-shadow:
+0 0 25px #a855ff;
+
+
+
 z-index:100;
+
+
 
 }
 
@@ -43,10 +194,15 @@ z-index:100;
 
 nav a{
 
+
 color:white;
+
+
 font-size:25px;
 
+
 transition:.3s;
+
 
 }
 
@@ -54,36 +210,55 @@ transition:.3s;
 
 nav a:hover{
 
+
 color:#a855ff;
 
+
 text-shadow:
-0 0 15px #a855ff;
+
+0 0 20px #a855ff;
+
 
 }
+
+
+
 
 
 
 section{
 
+
 min-height:100vh;
+
 
 display:flex;
 
+
 flex-direction:column;
+
 
 justify-content:center;
 
+
 align-items:center;
 
+
+
 padding:50px;
+
+
 
 }
 
 
 
+
 h1{
 
+
 font-size:60px;
+
 
 }
 
@@ -91,10 +266,25 @@ font-size:60px;
 
 span{
 
+
 color:#a855ff;
 
+
 text-shadow:
-0 0 20px #a855ff;
+
+0 0 30px #a855ff;
+
+
+}
+
+
+
+
+h2{
+
+
+margin-top:20px;
+
 
 }
 
@@ -102,52 +292,87 @@ text-shadow:
 
 p{
 
+
 max-width:600px;
+
 
 font-size:20px;
 
+
 text-align:center;
+
 
 color:#ccc;
 
+
 margin-top:20px;
 
+
 }
+
+
 
 
 
 button{
 
+
 margin-top:30px;
+
 
 padding:15px 40px;
 
+
+
 border:none;
+
 
 border-radius:30px;
 
+
+
 background:#a855ff;
+
 
 color:white;
 
+
+
 font-size:18px;
 
+
+
 box-shadow:
-0 0 25px #a855ff;
+
+0 0 30px #a855ff;
+
+
 
 cursor:pointer;
+
 
 }
 
 
 
+
+
+
+
+/* CARDS */
+
+
 .cards{
+
 
 display:flex;
 
+
 gap:30px;
 
+
 margin-top:50px;
+
 
 }
 
@@ -155,21 +380,35 @@ margin-top:50px;
 
 .card{
 
+
 width:300px;
+
 
 padding:30px;
 
+
 background:#10002b;
+
+
 
 border-radius:20px;
 
-border:1px solid #a855ff;
+
+
+border:
+
+1px solid #a855ff;
+
+
 
 box-shadow:
-0 0 20px #5b21b6;
+
+0 0 25px #5b21b6;
+
 
 
 transition:.3s;
+
 
 }
 
@@ -177,9 +416,274 @@ transition:.3s;
 
 .card:hover{
 
-transform:translateY(-10px);
+
+transform:translateY(-15px);
+
+
 
 box-shadow:
-0 0 40px #a855ff;
+
+0 0 50px #a855ff;
+
+
+}
+
+
+
+
+
+
+
+/* CUBES */
+
+
+.cubes span{
+
+
+position:absolute;
+
+
+width:40px;
+
+
+height:40px;
+
+
+
+background:
+
+rgba(168,85,247,.2);
+
+
+
+border:
+
+1px solid #a855ff;
+
+
+
+box-shadow:
+
+0 0 30px #a855ff;
+
+
+
+animation:
+
+floatCube 12s infinite;
+
+
+}
+
+
+
+
+
+.cubes span:nth-child(1){
+
+left:10%;
+top:20%;
+
+}
+
+
+.cubes span:nth-child(2){
+
+left:80%;
+top:30%;
+
+animation-delay:2s;
+
+}
+
+
+.cubes span:nth-child(3){
+
+left:40%;
+top:70%;
+
+animation-delay:4s;
+
+}
+
+
+.cubes span:nth-child(4){
+
+left:70%;
+top:80%;
+
+animation-delay:6s;
+
+}
+
+
+.cubes span:nth-child(5){
+
+left:20%;
+top:60%;
+
+animation-delay:8s;
+
+}
+
+
+.cubes span:nth-child(6){
+
+left:90%;
+top:10%;
+
+animation-delay:10s;
+
+}
+
+
+
+
+@keyframes floatCube{
+
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+opacity:.2;
+
+}
+
+
+
+50%{
+
+transform:
+translateY(-100px)
+rotate(180deg);
+
+
+opacity:1;
+
+}
+
+
+
+100%{
+
+transform:
+translateY(0)
+rotate(360deg);
+
+
+opacity:.2;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* PARTICLES */
+
+
+#particles{
+
+
+position:fixed;
+
+
+inset:0;
+
+
+pointer-events:none;
+
+
+z-index:-1;
+
+
+}
+
+
+
+.particle{
+
+
+position:absolute;
+
+
+width:5px;
+
+
+height:5px;
+
+
+background:#a855ff;
+
+
+
+border-radius:50%;
+
+
+
+box-shadow:
+
+0 0 15px #a855ff;
+
+
+
+animation:
+
+particleFloat linear infinite;
+
+
+
+}
+
+
+
+
+@keyframes particleFloat{
+
+
+from{
+
+
+transform:
+
+translateY(100vh);
+
+
+opacity:0;
+
+
+}
+
+
+
+20%{
+
+opacity:1;
+
+}
+
+
+
+to{
+
+
+transform:
+
+translateY(-20vh);
+
+
+opacity:0;
+
+
+}
+
 
 }
