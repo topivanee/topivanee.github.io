@@ -22,7 +22,25 @@ behavior:"smooth"
 });
 
 
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
 
+document.querySelectorAll(".vouches img").forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        lightboxImage.src = img.src;
+        lightbox.classList.add("active");
+
+    });
+
+});
+
+lightbox.addEventListener("click", () => {
+
+    lightbox.classList.remove("active");
+
+});
 
 // Create particles
 
