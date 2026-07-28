@@ -913,3 +913,50 @@ text-shadow:
 min-height:70vh;
 
 }
+/* VOUCHES */
+
+#vouches{
+    min-height:100vh;
+}
+
+.vouches{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+    width:100%;
+    max-width:1200px;
+
+    margin-top:50px;
+
+}
+
+.vouches img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    border:2px solid #a855ff;
+
+    box-shadow:
+    0 0 25px #5b21b6;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.vouches img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 45px #a855ff;
+
+}
