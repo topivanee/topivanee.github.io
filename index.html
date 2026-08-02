@@ -260,7 +260,7 @@
         <button class="view-code-btn" data-game="Combat Framework" data-scripts='[
             {
                 "path": "Server/Modules/Punching.luau",
-                "code": "local Punch = {}\n\nfunction Punch.Objective(player: Player)\n\tlocal character = player.Character\n\tif not character or character:GetAttribute(\"Stunned\") then return end\n\tcharacter:SetAttribute(\"Stunned\", true)\n\t\n\tanimTrack:GetMarkerReachedSignal(\"Damage\"):Connect(function()\n\t\tlocal hitParts = workspace:GetPartBoundsInBox(rootPart.CFrame * CFrame.new(0, 0, -4), Vector3.new(6, 5, 8))\n\t\tfor _, part in hitParts do\n\t\t\tlocal targetHumanoid = part.Parent:FindFirstChildOfClass(\"Humanoid\")\n\t\t\tif targetHumanoid then\n\t\t\t\ttargetHumanoid:TakeDamage(10)\n\t\t\tend\n\t\tend\n\tend)\nend\n\nreturn Punch"
+                "code": "NO SNIPET CURRENTLY!"
             }
         ]'>
             <i class="fa-solid fa-code"></i> View Snipet Code
