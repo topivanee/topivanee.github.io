@@ -213,7 +213,7 @@
         <button class="view-code-btn" data-game="Task System" data-scripts='[
             {
                 "path": "Client/Modules/TaskSystem.luau",
-                "code": "local TaskSystem = {}\n\nfunction TaskSystem.new()\n\tlocal missionsTab = script.Missions:Clone()\n\tmissionsTab.Parent = mainGui\n\t\n\tmissionsTab.OpenButton.Activated:Connect(function()\n\t\topenedFrame.Visible = not openedFrame.Visible\n\t\tlocal btnText = openedFrame.Visible and \"(Close)\" or \"(Open)\"\n\t\tmissionsTab.OpenButton.Text = btnText\n\t\tUpdateTable(openedFrame.MissionsFrame)\n\tend)\nend\n\nreturn TaskSystem"
+                "code": "NO SNIPET CURRENTLY!"
             }
         ]'>
             <i class="fa-solid fa-code"></i> View Snipet Code
@@ -229,7 +229,7 @@
         <button class="view-code-btn" data-game="Shop & Inventory" data-scripts='[
             {
                 "path": "StarterPlayer/StarterPlayerScripts/InventoryController.luau",
-                "code": "local InventoryController = {}\n\nfunction InventoryController.EquipTower(towerName: string): boolean\n\tlocal remote = ReplicatedStorage.RemoteEvents:WaitForChild(\"EquipTower\")\n\treturn remote:InvokeServer(towerName)\nend\n\nfunction InventoryController.PopulateInventory(items: { string })\n\tfor _, itemName in items do\n\t\tlocal card = script.TemplateCard:Clone()\n\t\tcard.EquipButton.Activated:Connect(function()\n\t\t\tInventoryController.EquipTower(itemName)\n\t\tend)\n\t\tcard.Parent = cardGrid\n\tend\nend\n\nreturn InventoryController"
+                "code": "NO SNIPET CURRENTLY!"
             }
         ]'>
             <i class="fa-solid fa-code"></i> View Snipet Code
@@ -294,8 +294,8 @@
         <button class="view-code-btn" data-game="Scared NPC Behaviour" data-scripts='[
             {
                 "path": "ServerScriptService/AIService.luau",
-                "code": "local AIService = {}\n\nfunction AIService.FleeFromTarget(npc: Model, threat: BasePart)\n\tlocal root = npc:FindFirstChild(\"HumanoidRootPart\") :: BasePart\n\tlocal fleeGoal = root.Position + (root.Position - threat.Position).Unit * 30\n\t\n\tlocal path = PathfindingService:CreatePath({ AgentRadius = 2, AgentCanJump = true })\n\tpath:ComputeAsync(root.Position, fleeGoal)\n\t\n\tif path.Status == Enum.PathStatus.Success then\n\t\tfor _, waypoint in path:GetWaypoints() do\n\t\t\thumanoid:MoveTo(waypoint.Position)\n\t\t\thumanoid.MoveToFinished:Wait()\n\t\tend\n\tend\nend\n\nreturn AIService"
-            }
+                "code": "NO SNIPET CURRENTLY!"
+            {
         ]'>
             <i class="fa-solid fa-code"></i> View Snipet Code
         </button>
@@ -309,7 +309,7 @@
         <button class="view-code-btn" data-game="Cinematic Cutscene Engine" data-scripts='[
             {
                 "path": "StarterPlayer/StarterPlayerScripts/CutsceneController.luau",
-                "code": "local CutsceneController = {}\n\nfunction CutsceneController.PlaySequence(pointsFolder: Folder, durationPerPoint: number)\n\tcamera.CameraType = Enum.CameraType.Scriptable\n\t\n\tfor i = 1, #waypoints - 1 do\n\t\tlocal tween = TweenService:Create(\n\t\t\tcamera,\n\t\t\tTweenInfo.new(durationPerPoint, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut),\n\t\t\t{ CFrame = waypoints[i + 1].CFrame }\n\t\t)\n\t\ttween:Play()\n\t\ttween.Completed:Wait()\n\tend\n\tcamera.CameraType = Enum.CameraType.Custom\nend\n\nreturn CutsceneController"
+                "code": "NO SNIPET CURRENTLY!"
             }
         ]'>
             <i class="fa-solid fa-code"></i> View Snipet Code
@@ -324,7 +324,7 @@
         <button class="view-code-btn" data-game="Troll Tower Mechanics" data-scripts='[
             {
                 "path": "ServerScriptService/TrapService.luau",
-                "code": "local TrapService = {}\n\nfunction TrapService.InitTrap(trapPart: BasePart, trapType: string)\n\ttrapPart.Touched:Connect(function(hit)\n\t\tlocal rootPart = hit.Parent:FindFirstChild(\"HumanoidRootPart\") :: BasePart\n\t\tif not rootPart then return end\n\t\t\n\t\tif trapType == \"Fling\" then\n\t\t\tlocal bodyVelocity = Instance.new(\"BodyVelocity\")\n\t\t\tbodyVelocity.Velocity = Vector3.new(math.random(-50, 50), 120, math.random(-50, 50))\n\t\t\tbodyVelocity.Parent = rootPart\n\t\t\tDebris:AddItem(bodyVelocity, 0.2)\n\t\tend\n\tend)\nend\n\nreturn TrapService"
+                "code": "NO SNIPET CURRENTLY!"
             }
         ]'>
             <i class="fa-solid fa-code"></i> View Snipet Code
