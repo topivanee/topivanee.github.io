@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivane | Roblox Developer📜</title>
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="cubes">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="particles"></div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home" title="Home"><i class="fa-solid fa-house"></i></a>
+        <a href="#work" title="Work"><i class="fa-solid fa-briefcase"></i></a>
+        <a href="#payments" title="Pricing"><i class="fa-solid fa-credit-card"></i></a>
+        <a href="#vouches" title="Vouches"><i class="fa-solid fa-comments"></i></a> <!-- Updated Vouches Icon -->
+        <a href="#contact" title="Contact"><i class="fa-solid fa-envelope"></i></a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="availability">
+            <span class="availability-dot"></span>
+            AVAILABLE FOR COMMISSIONS
+        </div>
+
+        <h1>Hi, I'm <span>Ivane</span></h1>
+        <h2>Roblox Developer | Lua Programmer</h2>
+
+        <p>
+            Creating immersive Roblox experiences with custom systems, gameplay mechanics, and polished UI.
+        </p>
+
+        <a href="#work">
+            <button>View My Work</button>
+        </a>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1>Tech Stack & Skills</h1>
+        <p>Core programming languages, Roblox services, frameworks, and developer tools I specialize in.</p>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Luau / Lua 5.1</h3>
+                <p>OOP, Metatables, Task Scheduler, Coroutines</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>DataStores & Saving</h3>
+                <p>ProfileService, ReplicaService, Session Locking</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-route"></i>
+                <h3>AI & Pathfinding</h3>
+                <p>PathfindingService, NPC Logic, Finite State Machines</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Server Security</h3>
+                <p>Custom Anti-Cheat, Server Validation, Remote Guards</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>UI Systems & Tweening</h3>
+                <p>TweenService, UI Animations, Custom Shops & Inventories</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-github"></i>
+                <h3>Tools & Workflow</h3>
+                <p>VS Code, Git, Studio Workflows</p>
+            </div>
+        </div>
+    </section>
+   <!-- Development Showcase Section -->
+    <section id="work">
+        <h1>Development Showcase</h1>
+        <p class="section-desc">A categorized showcase of custom Luau systems, gameplay mechanics, and UI frameworks I've built.</p>
+
+        <!-- Category 1: Systems & Security -->
+        <div class="showcase-category">
+            <h2 class="category-title"><i class="fa-solid fa-shield-halved"></i> Systems, Security & Mechanics</h2>
+            <div class="cards">
+                <div class="card">
+                    <span class="card-badge">Security</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/P66yBgAB60o" allowfullscreen></iframe>
+                    <h2>Anti-Cheat System</h2>
+                    <p>Noclip checker, Jump hack checker, Walkspeed checker, and Fly checker.</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge">Game Logic</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/wGWdrZFdLns" allowfullscreen></iframe>
+                    <h2>Platform Functions</h2>
+                    <p>Core gameplay systems, survival mechanics, round logic, and dynamic events.</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge">Interactive</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/k-sh1sgqhis" allowfullscreen></iframe>
+                    <h2>Guess the ___ System</h2>
+                    <p>2-player detection, randomized image covers, and guess validation logic.</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge">Tasks</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/tf-nnVtqXeE" allowfullscreen></iframe>
+                    <h2>Task System</h2>
+                    <p>Dynamic task assignment and tracking system integrated with UI.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 2: UI Systems & Shops -->
+        <div class="showcase-category">
+            <h2 class="category-title"><i class="fa-solid fa-layer-group"></i> UI & Inventory Systems</h2>
+            <div class="cards">
+                <div class="card">
+                    <span class="card-badge">Inventory</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/XxIDAeO83IQ" allowfullscreen></iframe>
+                    <h2>Tower Defense Shop & Inventory</h2>
+                    <p>Custom tower purchasing, inventory management, and equipping system.</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge">Economy UI</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/zV8n-zKXOfc" allowfullscreen></iframe>
+                    <h2>Cash UI System</h2>
+                    <p>Smooth animated currency UI with visual feedback on balance changes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 3: AI, Combat & Features -->
+        <div class="showcase-category">
+            <h2 class="category-title"><i class="fa-solid fa-wand-magic-sparkles"></i> AI, Combat & Cinematics</h2>
+            <div class="cards">
+                <div class="card">
+                    <span class="card-badge">Combat</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/hzrU8rqrE3M" allowfullscreen></iframe>
+                    <h2>Combat & Ability Framework</h2>
+                    <p>Action combat system with skill cooldowns, hitboxes, and particle effects.</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge">Tower Defense</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/9HldbOa5tQ0" allowfullscreen></iframe>
+                    <h2>Tower Defense Engine</h2>
+                    <p>Optimized client-side rendering and tower placement mechanics.</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge">AI Logic</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/C608AzhK188" allowfullscreen></iframe>
+                    <h2>Scared NPC Behaviour</h2>
+                    <p>AI state machine where NPCs dynamically react to player presence and hazards.</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge">Cinematics</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/66MxLQ4AcXM" allowfullscreen></iframe>
+                    <h2>Cinematic Cutscene Engine</h2>
+                    <p>Smooth camera tracks, storytelling sequences, and scripted events.</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-badge">Interactive</span>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/xQlPouOC15g" allowfullscreen></iframe>
+                    <h2>Troll Tower Mechanics</h2>
+                    <p>Custom traps, interactive tower triggers, and gameplay mechanics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <!-- Pricing & Payments Section -->
+    <section id="payments">
+        <h1>Commission Pricing</h1>
+        <p class="section-desc">Custom Roblox systems and development commissions. Prices scale based on complex logic, features, and timeframe.</p>
+
+        <!-- Pricing Tiers -->
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="tier-tag">Basic</div>
+                <h2>Small System</h2>
+                <div class="price-box">
+                    <span class="price-usd">$5 - $10</span>
+                    <span class="price-robux">100 - 1k Robux</span>
+                </div>
+                <p>Simple scripts, UI tweaks, bug fixes, or standalone basic mechanics.</p>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="tier-tag popular">Popular</div>
+                <h2>Medium System</h2>
+                <div class="price-box">
+                    <span class="price-usd">$10 - $20</span>
+                    <span class="price-robux">1k - 5k Robux</span>
+                </div>
+                <p>Custom inventory, shop UI, simple anti-cheat, or task systems.</p>
+            </div>
+
+            <div class="pricing-card">
+                <div class="tier-tag">Advanced</div>
+                <h2>Very Hard System</h2>
+                <div class="price-box">
+                    <span class="price-usd">$100+</span>
+                    <span class="price-robux">10k+ Robux</span>
+                </div>
+                <p>Full game frameworks, complex combat, AI pathfinding, or server security.</p>
+            </div>
+        </div>
+
+        <h2 class="payment-subtitle">Accepted Payment Methods</h2>
+
+        <!-- Payment Methods -->
+        <div class="payment-methods-grid">
+            <div class="method-card">
+                <i class="fa-brands fa-paypal method-icon"></i>
+                <h3>PayPal</h3>
+                <p>Direct payments for commission work and custom systems.</p>
+            </div>
+
+            <div class="method-card">
+                <i class="fa-solid fa-coins method-icon"></i>
+                <h3>Robux</h3>
+                <p>Group funds or gamepass payments (covering taxes if applicable).</p>
+            </div>
+
+            <div class="method-card">
+                <i class="fa-solid fa-chart-line method-icon"></i>
+                <h3>% Revenue Split</h3>
+                <p>Available for select long-term game development projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Vouches Section -->
+    <section id="vouches">
+        <h1>Client Feedback</h1>
+        <p>Feedback from clients I've worked with on Roblox commissions and projects.</p>
+
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Really fast, and optimized"</p>
+                <div class="testimonial-author">— A.y.c.e</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Really fast, and a good person"</p>
+                <div class="testimonial-author">— Momhouse</div>
+            </div>
+        </div>
+
+        <h2 class="vouch-title">Vouch Screenshots</h2>
+        <div class="vouches">
+            <img src="vouches/vouch1.png" alt="Client vouch screenshot">
+        </div>
+    </section>
+
+    <!-- Improved About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p class="about-desc">
+            Passionate Roblox Developer & Luau Scripting Specialist. I transform creative gameplay concepts into performant, clean, and reliable codebase systems.
+        </p>
+
+        <div class="about-content">
+            <img src="./profile.png" alt="Ivane Profile Picture" class="about-image">
+            
+            <div class="about-text-box">
+                <p>
+                    Whether you need complex backend architecture like custom <b>Anti-Cheats</b> and <b>DataStores</b>, or interactive frontend components like <b>Cutscenes & UI Animations</b>, I build features with optimal client-server communication in mind.
+                </p>
+                <div class="about-badges">
+                    <span class="badge"><i class="fa-solid fa-clock"></i> UTC+4 Timezone</span>
+                    <span class="badge"><i class="fa-solid fa-code"></i> Clean & Optimized Luau</span>
+                    <span class="badge"><i class="fa-solid fa-handshake"></i> Long-Term & Commissions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Improved Contact Section -->
+    <section id="contact">
+        <h1>Get In Touch</h1>
+        <p>Ready to bring your Roblox game ideas to life? Contact me through any of the platforms below!</p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fa-brands fa-discord contact-icon"></i>
+                <h3>Discord</h3>
+                <p>User: <code>topivanee</code></p>
+                <a href="https://discord.gg/G96StFUUD4" target="_blank" class="contact-btn">Join Community</a>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-gamepad contact-icon"></i>
+                <h3>Roblox Profile</h3>
+                <p>Check out my profile and creations directly on Roblox.</p>
+                <a href="https://www.roblox.com/users/1895991934/profile" target="_blank" class="contact-btn">View Profile</a>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-envelope contact-icon"></i>
+                <h3>Email</h3>
+                <p>Send me an email for inquiries & formal commissions.</p>
+                <a href="mailto:ivanegachechiladze2010@gmail.com" class="contact-btn">Send Email</a>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-brands fa-github contact-icon"></i>
+                <h3>GitHub</h3>
+                <p>Explore my open-source code and projects.</p>
+                <a href="https://github.com/topivanee" target="_blank" class="contact-btn">View GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Lightbox -->
+    <div id="lightbox">
+        <img id="lightbox-image" alt="Enlarged vouch preview">
+    </div>
+
+</body>
+</html>
