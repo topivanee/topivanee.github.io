@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Ivane | Roblox Developer📜</title>
+
+    <!-- Highlight.js CSS for Colorful Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="./profile.png">
+</head>
+
+<body>
+
+    <div class="cubes">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="particles"></div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home" title="Home"><i class="fa-solid fa-house"></i></a>
+        <a href="#work" title="Work"><i class="fa-solid fa-briefcase"></i></a>
+        <a href="#payments" title="Pricing"><i class="fa-solid fa-credit-card"></i></a>
+        <a href="#vouches" title="Vouches"><i class="fa-solid fa-comments"></i></a>
+        <a href="#contact" title="Contact"><i class="fa-solid fa-envelope"></i></a>
+    </nav>
+
+    <!-- Background Music Controls & SFX -->
+    <div class="audio-controls">
+        <button id="music-toggle" title="Toggle Background Music">
+            <i class="fa-solid fa-volume-xmark" id="music-icon"></i>
+        </button>
+    </div>
+
+    <!-- Click Sound Effect -->
+    <audio id="click-sound" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
+    <!-- Include YouTube API Script -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <div id="youtube-player" style="display: none;"></div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="availability">
+            <span class="availability-dot"></span>
+            AVAILABLE
+        </div>
+
+        <h1>Hi, I'm <span>Ivane</span></h1>
+        <h2>Roblox Developer | Lua Programmer</h2>
+
+        <p>
+            Creating immersive Roblox experiences with custom systems, gameplay mechanics, and polished UI.
+        </p>
+
+        <!-- Stats Counter Section -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <h3 class="stat-number" data-target="30">0</h3>
+                <span class="stat-label">Commissions Completed</span>
+            </div>
+            <div class="stat-item-divider"></div>
+            <div class="stat-item">
+                <h3 class="stat-number" data-target="2">0</h3>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item-divider"></div>
+            <div class="stat-item">
+                <h3 class="stat-number" data-target="100">0</h3>
+                <span class="stat-label">% Success Rate</span>
+            </div>
+        </div>
+
+        <a href="#work">
+            <button>View My Work</button>
+        </a>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1>Tech Stack & Skills</h1>
+        <p>Core programming languages, Roblox services, frameworks, and developer tools I specialize in.</p>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Luau / Lua 5.1</h3>
+                <p>OOP, Metatables, Task Scheduler, Coroutines</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>DataStores & Saving</h3>
+                <p>ProfileService, ReplicaService, Session Locking</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-route"></i>
+                <h3>AI & Pathfinding</h3>
+                <p>PathfindingService, NPC Logic, Finite State Machines</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Server Security</h3>
+                <p>Custom Anti-Cheat, Server Validation, Remote Guards</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>UI Systems & Tweening</h3>
+                <p>TweenService, UI Animations, Custom Shops & Inventories</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-github"></i>
+                <h3>Tools & Workflow</h3>
+                <p>VS Code, Git, Studio Workflows</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Showcase Section -->
+    <section id="work">
+        <h1>Development Showcase</h1>
+        <p class="section-desc">Explore my showcase of custom Luau systems, gameplay mechanics, and UI frameworks.</p>
+
+        <!-- Filter Buttons -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="systems"><i class="fa-solid fa-shield-halved"></i> Systems & Security</button>
+            <button class="filter-btn" data-filter="ui"><i class="fa-solid fa-layer-group"></i> UI & Inventory</button>
+            <button class="filter-btn" data-filter="ai"><i class="fa-solid fa-wand-magic-sparkles"></i> AI & Combat</button>
+        </div>
+
+      <!-- Showcase Cards Grid -->
+<div class="cards showcase-grid">
+
+    <!-- Systems & Security -->
+    <div class="card showcase-card" data-category="systems">
+        <span class="card-badge">Randomizer</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/iPz7nSvSMaw" allowfullscreen></iframe>
+        <h2>Randomized Rarity System</h2>
+        <p>Spawns cars based on rarity(%), Clickable Cars</p>
+        <button class="view-code-btn" data-game="Randomized System" data-scripts='[
+            {
+                "path": "ServerScriptService/CarSpawner.luau",
+                "code": "local Car = {}\n\nfunction Car.SpawnCar(spawnPoint)\n\tlocal rarity = RarityModule:GetRandomRarity()\n\tlocal possibleCars = Car[\"CarsByRarity\"][rarity]\n\tif not possibleCars then return end\n\t\n\tlocal template = possibleCars[math.random(#possibleCars)]\n\tlocal car = template:Clone()\n\tcar.Parent = SpawnedCars\n\tcar:PivotTo(spawnPoint.CFrame)\n\t\n\tlocal clickDetector = Instance.new(\"ClickDetector\")\n\tclickDetector.Parent = car\n\t\n\tclickDetector.MouseClick:Connect(function(player)\n\t\tNetwork.Fire(\"Carclicked\", player, {\n\t\t\t[\"CarModel\"] = car,\n\t\t\t[\"Rarity\"] = rarity\n\t\t})\n\tend)\n\t\n\ttask.spawn(function()\n\t\t-- Handle despawn countdown logic\n\t\ttask.wait(RarityModule:GetRespawnTime(rarity))\n\t\tif car.Parent then Debris:AddItem(car, 0.1) end\n\t\tCar.SpawnCar(spawnPoint)\n\tend)\nend\n\nreturn Car"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+    <div class="card showcase-card" data-category="systems">
+        <span class="card-badge">Security</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/P66yBgAB60o" allowfullscreen></iframe>
+        <h2>Anti-Cheat System</h2>
+        <p>Noclip checker, Jump hack checker, Walkspeed checker, and Fly checker.</p>
+        <button class="view-code-btn" data-game="Anti Cheat System" data-scripts='[
+            {
+                "path": "ServerScriptService/CheckNoclip.luau",
+                "code": "local AntiCheat = {}\n\nfunction AntiCheat.CheckNoclip(player: Player, character: Model, rootPart: BasePart)\n\tlocal oldPos = rootPart.Position\n\ttask.wait(0.35)\n\t\n\tlocal direction = rootPart.Position - oldPos\n\tlocal result = workspace:Raycast(oldPos, direction, raycastParams)\n\t\n\tif result and result.Instance and result.Instance.CanCollide then\n\t\twarningsHandler:Warn(player)\n\t\trootPart.CFrame = CFrame.new(oldPos)\n\tend\nend\n\nreturn AntiCheat"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <div class="card showcase-card" data-category="systems">
+        <span class="card-badge">Game Logic</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/wGWdrZFdLns" allowfullscreen></iframe>
+        <h2>Platform Functions</h2>
+        <p>Core gameplay systems, survival mechanics, round logic, and dynamic events.</p>
+        <button class="view-code-btn" data-game="Platform Functions" data-scripts='[
+            {
+                "path": "ServerScriptService/RoundModule.luau",
+                "code": "local Round = {}\nRound.__index = Round\n\nfunction Round:RunEvent(playersAlive: { Player })\n\tlocal selectedEvent = self.Events[math.random(1, #self.Events)]\n\t\n\tlocal success, err = pcall(selectedEvent.Run, {\n\t\tPlatform = self.Platform,\n\t\tPlayersAlive = playersAlive,\n\t})\n\t\n\tif not success then\n\t\twarn(\"[Round] Event failed: \" .. tostring(err))\n\tend\nend\n\nreturn Round"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <div class="card showcase-card" data-category="systems">
+        <span class="card-badge">Interactive</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/k-sh1sgqhis" allowfullscreen></iframe>
+        <h2>Guess the ___ System</h2>
+        <p>2-player detection, randomized image covers, and guess validation logic.</p>
+        <button class="view-code-btn" data-game="Guess the ___ System" data-scripts='[
+            {
+                "path": "ServerScriptService/Modules/ChooseCharacter.luau",
+                "code": "local ChooseCharacter = {}\n\nfunction ChooseCharacter.Init(tableData: any, sessionData: any)\n\tfor player in pairs(sessionData.Players) do\n\t\ttableRemote:FireClient(player, \"ChooseCharacter\", tableData, sessionData)\n\t\tlocal humanoid = player.Character and player.Character:FindFirstChildOfClass(\"Humanoid\")\n\t\tif humanoid then\n\t\t\thumanoid.WalkSpeed = 0\n\t\t\thumanoid.JumpPower = 0\n\t\tend\n\tend\n\t\n\t-- Handle countdown and selection triggers\nend\n\nreturn ChooseCharacter"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <div class="card showcase-card" data-category="systems">
+        <span class="card-badge">Tasks</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/tf-nnVtqXeE" allowfullscreen></iframe>
+        <h2>Task System</h2>
+        <p>Dynamic task assignment and tracking system integrated with UI.</p>
+        <button class="view-code-btn" data-game="Task System" data-scripts='[
+            {
+                "path": "Client/Modules/TaskSystem.luau",
+                "code": "local TaskSystem = {}\n\nfunction TaskSystem.new()\n\tlocal missionsTab = script.Missions:Clone()\n\tmissionsTab.Parent = mainGui\n\t\n\tmissionsTab.OpenButton.Activated:Connect(function()\n\t\topenedFrame.Visible = not openedFrame.Visible\n\t\tlocal btnText = openedFrame.Visible and \"(Close)\" or \"(Open)\"\n\t\tmissionsTab.OpenButton.Text = btnText\n\t\tUpdateTable(openedFrame.MissionsFrame)\n\tend)\nend\n\nreturn TaskSystem"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <!-- UI & Inventory -->
+    <div class="card showcase-card" data-category="ui">
+        <span class="card-badge">Inventory</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/XxIDAeO83IQ" allowfullscreen></iframe>
+        <h2>Tower Defense Shop & Inventory</h2>
+        <p>Custom tower purchasing, inventory management, and equipping system.</p>
+        <button class="view-code-btn" data-game="Shop & Inventory" data-scripts='[
+            {
+                "path": "StarterPlayer/StarterPlayerScripts/InventoryController.luau",
+                "code": "local InventoryController = {}\n\nfunction InventoryController.EquipTower(towerName: string): boolean\n\tlocal remote = ReplicatedStorage.RemoteEvents:WaitForChild(\"EquipTower\")\n\treturn remote:InvokeServer(towerName)\nend\n\nfunction InventoryController.PopulateInventory(items: { string })\n\tfor _, itemName in items do\n\t\tlocal card = script.TemplateCard:Clone()\n\t\tcard.EquipButton.Activated:Connect(function()\n\t\t\tInventoryController.EquipTower(itemName)\n\t\tend)\n\t\tcard.Parent = cardGrid\n\tend\nend\n\nreturn InventoryController"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <div class="card showcase-card" data-category="ui">
+        <span class="card-badge">Economy UI</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/zV8n-zKXOfc" allowfullscreen></iframe>
+        <h2>Cash UI System</h2>
+        <p>Smooth animated currency UI with visual feedback on balance changes.</p>
+        <button class="view-code-btn" data-game="Cash UI System" data-scripts='[
+            {
+                "path": "Client/LocalScript.luau",
+                "code": "local function SpawnCoin(worldPosition: Vector3?)\n\tlocal coin = template:Clone()\n\tcoin.Parent = effectsGui\n\t\n\tlocal connection\n\tconnection = RunService.RenderStepped:Connect(function()\n\t\tlocal alpha = math.clamp((os.clock() - startTime) / 1, 0, 1)\n\t\tlocal currentPos = quadraticBezier(alpha, viewportPos, controlPos, targetPos)\n\t\tcoin.Position = UDim2.fromOffset(currentPos.X, currentPos.Y)\n\t\t\n\t\tif alpha >= 1 then\n\t\t\tconnection:Disconnect()\n\t\t\tcoin:Destroy()\n\t\t\tupdateCurrencyDisplay(10)\n\t\tend\n\tend)\nend"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <!-- AI & Combat -->
+    <div class="card showcase-card" data-category="ai">
+        <span class="card-badge">Combat</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/hzrU8rqrE3M" allowfullscreen></iframe>
+        <h2>Combat & Ability Framework</h2>
+        <p>Action combat system with skill cooldowns, hitboxes, and particle effects.</p>
+        <button class="view-code-btn" data-game="Combat Framework" data-scripts='[
+            {
+                "path": "Server/Modules/Punching.luau",
+                "code": "local Punch = {}\n\nfunction Punch.Objective(player: Player)\n\tlocal character = player.Character\n\tif not character or character:GetAttribute(\"Stunned\") then return end\n\tcharacter:SetAttribute(\"Stunned\", true)\n\t\n\tanimTrack:GetMarkerReachedSignal(\"Damage\"):Connect(function()\n\t\tlocal hitParts = workspace:GetPartBoundsInBox(rootPart.CFrame * CFrame.new(0, 0, -4), Vector3.new(6, 5, 8))\n\t\tfor _, part in hitParts do\n\t\t\tlocal targetHumanoid = part.Parent:FindFirstChildOfClass(\"Humanoid\")\n\t\t\tif targetHumanoid then\n\t\t\t\ttargetHumanoid:TakeDamage(10)\n\t\t\tend\n\t\tend\n\tend)\nend\n\nreturn Punch"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <div class="card showcase-card" data-category="ai">
+        <span class="card-badge">Tower Defense</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/9HldbOa5tQ0" allowfullscreen></iframe>
+        <h2>Tower Defense Engine</h2>
+        <p>Optimized client-side rendering and tower placement mechanics.</p>
+        <button class="view-code-btn" data-game="Tower Defense Engine" data-scripts='[
+            {
+                "path": "Server/Modules/Enemies/Spawn.luau",
+                "code": "local EnemySpawner = {}\n\nfunction EnemySpawner.doIt(enemyId: number, amount: number, remoteEvent: RemoteEvent, player: Player, wave: number)\n\tfor _ = 1, amount do\n\t\tlocal enemyData = {\n\t\t\tId = enemyId,\n\t\t\tHash = counter,\n\t\t\tHealth = HandleData[enemyId].Health,\n\t\t\tSpeed = HandleData[enemyId].Speed,\n\t\t\tWave = wave\n\t\t}\n\t\tcounter += 1\n\t\tremoteEvent:FireClient(player, { enemyData })\n\t\ttask.wait(0.5)\n\tend\nend\n\nreturn EnemySpawner"
+            },
+            {
+                "path": "Server/Tower/Spawn.luau",
+                "code": "local TowerSpawner = {}\n\nfunction TowerSpawner.doIt(towerId: number, remoteEvent: RemoteEvent, player: Player, targetCFrame: CFrame)\n\tlocal towerData = {\n\t\tId = towerId,\n\t\tHash = counter,\n\t\tHealth = HandleData[towerId].Health\n\t}\n\tcounter += 1\n\tremoteEvent:FireAllClients(true, targetCFrame, { towerData })\nend\n\nreturn TowerSpawner"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <div class="card showcase-card" data-category="ai">
+        <span class="card-badge">AI Logic</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/C608AzhK188" allowfullscreen></iframe>
+        <h2>Scared NPC Behaviour</h2>
+        <p>AI state machine where NPCs dynamically react to player presence and hazards.</p>
+        <button class="view-code-btn" data-game="Scared NPC Behaviour" data-scripts='[
+            {
+                "path": "ServerScriptService/AIService.luau",
+                "code": "local AIService = {}\n\nfunction AIService.FleeFromTarget(npc: Model, threat: BasePart)\n\tlocal root = npc:FindFirstChild(\"HumanoidRootPart\") :: BasePart\n\tlocal fleeGoal = root.Position + (root.Position - threat.Position).Unit * 30\n\t\n\tlocal path = PathfindingService:CreatePath({ AgentRadius = 2, AgentCanJump = true })\n\tpath:ComputeAsync(root.Position, fleeGoal)\n\t\n\tif path.Status == Enum.PathStatus.Success then\n\t\tfor _, waypoint in path:GetWaypoints() do\n\t\t\thumanoid:MoveTo(waypoint.Position)\n\t\t\thumanoid.MoveToFinished:Wait()\n\t\tend\n\tend\nend\n\nreturn AIService"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <div class="card showcase-card" data-category="ai">
+        <span class="card-badge">Cinematics</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/66MxLQ4AcXM" allowfullscreen></iframe>
+        <h2>Cinematic Cutscene Engine</h2>
+        <p>Smooth camera tracks, storytelling sequences, and scripted events.</p>
+        <button class="view-code-btn" data-game="Cinematic Cutscene Engine" data-scripts='[
+            {
+                "path": "StarterPlayer/StarterPlayerScripts/CutsceneController.luau",
+                "code": "local CutsceneController = {}\n\nfunction CutsceneController.PlaySequence(pointsFolder: Folder, durationPerPoint: number)\n\tcamera.CameraType = Enum.CameraType.Scriptable\n\t\n\tfor i = 1, #waypoints - 1 do\n\t\tlocal tween = TweenService:Create(\n\t\t\tcamera,\n\t\t\tTweenInfo.new(durationPerPoint, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut),\n\t\t\t{ CFrame = waypoints[i + 1].CFrame }\n\t\t)\n\t\ttween:Play()\n\t\ttween.Completed:Wait()\n\tend\n\tcamera.CameraType = Enum.CameraType.Custom\nend\n\nreturn CutsceneController"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+    <div class="card showcase-card" data-category="ai">
+        <span class="card-badge">Interactive</span>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/xQlPouOC15g" allowfullscreen></iframe>
+        <h2>Troll Tower Mechanics</h2>
+        <p>Custom traps, interactive tower triggers, and gameplay mechanics.</p>
+        <button class="view-code-btn" data-game="Troll Tower Mechanics" data-scripts='[
+            {
+                "path": "ServerScriptService/TrapService.luau",
+                "code": "local TrapService = {}\n\nfunction TrapService.InitTrap(trapPart: BasePart, trapType: string)\n\ttrapPart.Touched:Connect(function(hit)\n\t\tlocal rootPart = hit.Parent:FindFirstChild(\"HumanoidRootPart\") :: BasePart\n\t\tif not rootPart then return end\n\t\t\n\t\tif trapType == \"Fling\" then\n\t\t\tlocal bodyVelocity = Instance.new(\"BodyVelocity\")\n\t\t\tbodyVelocity.Velocity = Vector3.new(math.random(-50, 50), 120, math.random(-50, 50))\n\t\t\tbodyVelocity.Parent = rootPart\n\t\t\tDebris:AddItem(bodyVelocity, 0.2)\n\t\tend\n\tend)\nend\n\nreturn TrapService"
+            }
+        ]'>
+            <i class="fa-solid fa-code"></i> View Snipet Code
+        </button>
+    </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing & Payments Section -->
+    <section id="payments">
+        <h1>Commission Pricing</h1>
+        <p class="section-desc">Custom Roblox systems and development commissions. Prices scale based on complex logic, features, and timeframe.</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="tier-tag">Basic</div>
+                <h2>Small System</h2>
+                <div class="price-box">
+                    <span class="price-usd">$5 - $10</span>
+                    <span class="price-robux">100 - 1k Robux</span>
+                </div>
+                <p>Simple scripts, UI tweaks, bug fixes, or standalone basic mechanics.</p>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="tier-tag popular">Popular</div>
+                <h2>Medium System</h2>
+                <div class="price-box">
+                    <span class="price-usd">$10 - $20</span>
+                    <span class="price-robux">1k - 5k Robux</span>
+                </div>
+                <p>Custom inventory, shop UI, simple anti-cheat, or task systems.</p>
+            </div>
+
+            <div class="pricing-card">
+                <div class="tier-tag">Advanced</div>
+                <h2>Very Hard System</h2>
+                <div class="price-box">
+                    <span class="price-usd">$100+</span>
+                    <span class="price-robux">10k+ Robux</span>
+                </div>
+                <p>Full game frameworks, complex combat, AI pathfinding, or server security.</p>
+            </div>
+        </div>
+
+        <h2 class="payment-subtitle">Accepted Payment Methods</h2>
+
+        <div class="payment-methods-grid">
+            <div class="method-card">
+                <i class="fa-brands fa-paypal method-icon"></i>
+                <h3>PayPal</h3>
+                <p>Direct payments for commission work and custom systems.</p>
+            </div>
+
+            <div class="method-card">
+                <i class="fa-solid fa-coins method-icon"></i>
+                <h3>Robux</h3>
+                <p>Group funds or gamepass payments (covering taxes if applicable).</p>
+            </div>
+
+            <div class="method-card">
+                <i class="fa-solid fa-chart-line method-icon"></i>
+                <h3>% Revenue Split</h3>
+                <p>Available for select long-term game development projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Vouches Section -->
+    <section id="vouches">
+        <h1>Client Feedback</h1>
+        <p>Feedback from clients I've worked with on Roblox commissions and projects.</p>
+
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Really fast, and optimized"</p>
+                <div class="testimonial-author">— A.y.c.e</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Really fast, and a good person"</p>
+                <div class="testimonial-author">— Momhouse</div>
+            </div>
+        </div>
+
+        <h2 class="vouch-title">Vouch Screenshots</h2>
+        <div class="vouches">
+            <img src="vouches/vouch1.png" alt="Client vouch screenshot">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Get In Touch</h1>
+        <p>Ready to bring your Roblox game ideas to life? Contact me through any of the platforms below!</p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fa-brands fa-discord contact-icon"></i>
+                <h3>Discord</h3>
+                <p>User: <code>topivanee</code></p>
+                <a href="https://discord.gg/G96StFUUD4" target="_blank" class="contact-btn">Join Community</a>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-gamepad contact-icon"></i>
+                <h3>Roblox Profile</h3>
+                <p>Check out my profile and creations directly on Roblox.</p>
+                <a href="https://www.roblox.com/users/1895991934/profile" target="_blank" class="contact-btn">View Profile</a>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-envelope contact-icon"></i>
+                <h3>Email</h3>
+                <p>Send me an email for inquiries & formal commissions.</p>
+                <a href="mailto:ivanegachechiladze2010@gmail.com" class="contact-btn">Send Email</a>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-brands fa-github contact-icon"></i>
+                <h3>GitHub</h3>
+                <p>Explore my open-source code and projects.</p>
+                <a href="https://github.com/topivanee" target="_blank" class="contact-btn">View GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Lightbox -->
+    <div id="lightbox">
+        <img id="lightbox-image" alt="Enlarged vouch preview">
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2 class="footer-logo">ivane</h2>
+                    <p class="footer-tagline">
+                        Building custom games, gameplay mechanics, and optimized systems on Roblox.
+                    </p>
+                </div>
+
+                <button id="back-to-top" class="scroll-top-btn" title="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Ivane. All rights reserved.</p>
+                <p class="credits">Built with Luau in mind — crafted with HTML & CSS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Code Viewer Modal -->
+    <div id="code-modal" class="code-modal">
+        <div class="code-modal-content">
+            <div class="code-modal-topbar">
+                <div class="modal-title">
+                    <i class="fa-solid fa-code"></i>
+                    <span id="modal-game-name">ROBLOX STUDIO SOURCE EXPLORER</span>
+                </div>
+                <div class="modal-topbar-actions">
+                    <button id="copy-code-btn" class="modal-action-btn"><i class="fa-solid fa-copy"></i> Copy Code</button>
+                    <button id="close-modal-btn" class="modal-close-btn">&times;</button>
+                </div>
+            </div>
+            <div class="code-modal-body">
+                <aside class="code-sidebar">
+                    <div class="sidebar-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="script-search" placeholder="Filter scripts...">
+                    </div>
+                    <ul class="script-tree" id="script-tree-list"></ul>
+                </aside>
+                <main class="code-editor-container">
+                    <div class="code-file-header">
+                        <span id="modal-file-path"><i class="fa-solid fa-file-code"></i> Script</span>
+                        <span class="file-lang">LUAU SCRIPT</span>
+                    </div>
+                    <div class="code-display">
+                        <div class="line-numbers" id="line-numbers"></div>
+                        <pre><code id="code-content" class="language-lua"></code></pre>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Highlight.js Library Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/lua.min.js"></script>
+
+</body>
+
+</html>
