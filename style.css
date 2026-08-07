@@ -3710,17 +3710,18 @@ footer {
 /* ==========================================
    BEST WORK BADGE & REORDERING
    ========================================== */
+/* ==========================================
+   BEST WORK BADGE & SIZING
+   ========================================== */
 
-/* Make the grid use flex or grid order to place best works first */
 .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
 }
 
-/* Best work cards span slightly larger and feature the badge */
+/* Best works look slightly larger and more prominent, but stay within their column */
 .project-card.best-work {
-    grid-column: span 2; /* Makes them larger/wider, taking full width of the 2-column grid */
     transform: scale(1.02);
     border-color: rgba(124, 92, 255, 0.4);
 }
@@ -3734,7 +3735,7 @@ footer {
 .best-work-badge {
     position: absolute;
     top: 15px;
-    right: 15px; /* Placed on top (opposite side of the video tag) */
+    left: 15px; /* Moved from right to left side */
     z-index: 10;
     display: flex;
     align-items: center;
