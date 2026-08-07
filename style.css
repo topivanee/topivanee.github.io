@@ -3991,3 +3991,118 @@ footer {
     }
 
 }
+/* ==========================================
+   SIDE UI (FIXED LEFT & RIGHT BARS)
+   ========================================== */
+
+.side-ui {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    pointer-events: none; /* Allows clicking through empty space */
+}
+
+.side-ui-left {
+    left: 40px;
+}
+
+.side-ui-right {
+    right: 40px;
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* Left Side Sections */
+.side-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.35;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: auto;
+}
+
+.side-section.active {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+.side-number {
+    font-family: monospace;
+    font-size: 10px;
+    color: var(--accent-light);
+}
+
+.side-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text);
+}
+
+/* Right Side Components */
+.side-ui-right > div {
+    pointer-events: auto;
+}
+
+.side-status {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.side-status-title {
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 1px;
+}
+
+.side-online {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.side-online span:first-child {
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--green);
+}
+
+.side-line {
+    width: 30px;
+    height: 1px;
+    background: var(--border);
+    margin: 4px 0;
+}
+
+.side-tech {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 10px;
+    color: var(--muted);
+    font-family: monospace;
+}
+
+.side-year {
+    font-family: monospace;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* Hide sidebars on smaller screens to prevent overlapping content */
+@media (max-width: 1200px) {
+    .side-ui {
+        display: none;
+    }
+}
