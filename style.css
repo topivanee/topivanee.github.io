@@ -4107,6 +4107,16 @@ footer {
     }
 }
 /* Hide sidebars exclusively on the homepage */
-body.home .side-ui {
+/* Hide sidebars by default when a hero/home section is present on the page */
+body:has(#hero) .side-ui,
+body:has(.hero) .side-ui,
+body:has(.homepage) .side-ui {
     display: none !important;
+}
+
+/* Show them once the user scrolls down */
+body:has(#hero).scrolled .side-ui,
+body:has(.hero).scrolled .side-ui,
+body:has(.homepage).scrolled .side-ui {
+    display: flex !important;
 }
