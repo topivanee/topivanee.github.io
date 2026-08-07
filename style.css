@@ -3108,29 +3108,32 @@ footer {
 
 /* ---------- GRID ---------- */
 
-/* ==========================================
-   ABOUT — CENTER LAST CARD
-========================================== */
-
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+        "profile skills"
+        "approach approach";
     gap: 18px;
+    width: 100%;
     align-items: start;
 }
 
-.about-profile-card,
+.about-profile-card {
+    grid-area: profile;
+    width: 100%;
+}
+
 .about-skills-card {
+    grid-area: skills;
     width: 100%;
 }
 
 .about-approach-card {
-    grid-column: 1 / 3;
-
-    width: 100%;
-    max-width: 650px;
-
+    grid-area: approach;
+    width: min(100%, 650px);
     justify-self: center;
+    margin: 0;
 }
 
 
@@ -3544,14 +3547,6 @@ footer {
 /* ---------- MOBILE ---------- */
 
 @media (max-width: 900px) {
-.about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-approach-card {
-        grid-column: auto;
-        max-width: none;
-    }
 
     .about-header {
         grid-template-columns: 1fr;
@@ -3565,6 +3560,10 @@ footer {
 
     .about-grid {
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "profile"
+            "skills"
+            "approach";
     }
 
     .about-profile-card,
@@ -3575,7 +3574,6 @@ footer {
     }
 
 }
-
 
 @media (max-width: 600px) {
 
@@ -3626,87 +3624,75 @@ footer {
     }
 
 }
+
 /* ==========================================
    CUSTOM CURSOR
 ========================================== */
 
 @media (min-width: 851px) {
 
-    body {
-        cursor: none;
-    }
-
-    a,
-    button,
-    .project-card,
-    .game-card {
-        cursor: none;
+    html,
+    body,
+    body * {
+        cursor: none !important;
     }
 
     .cursor-dot {
         position: fixed;
         top: 0;
         left: 0;
-
         width: 6px;
         height: 6px;
-
-        background: white;
+        background: #fff;
         border-radius: 50%;
-
         pointer-events: none;
-        z-index: 99999;
-
+        z-index: 999999;
         transform: translate(-50%, -50%);
-
         box-shadow:
-            0 0 8px rgba(124, 92, 255, .9),
-            0 0 20px rgba(124, 92, 255, .6);
+            0 0 8px rgba(124, 92, 255, .95),
+            0 0 20px rgba(124, 92, 255, .65);
     }
 
     .cursor-ring {
         position: fixed;
         top: 0;
         left: 0;
-
         width: 34px;
         height: 34px;
-
-        border: 1px solid rgba(255,255,255,.35);
+        border: 1px solid rgba(255,255,255,.4);
         border-radius: 50%;
-
         pointer-events: none;
-        z-index: 99998;
-
+        z-index: 999998;
         transform: translate(-50%, -50%);
-
         transition:
-            width .25s ease,
-            height .25s ease,
-            border-color .25s ease,
-            background .25s ease;
-
+            width .2s ease,
+            height .2s ease,
+            border-color .2s ease,
+            background .2s ease,
+            box-shadow .2s ease;
         backdrop-filter: blur(2px);
     }
-
-    /* Hover effect */
 
     body.cursor-hover .cursor-ring {
         width: 52px;
         height: 52px;
-
-        border-color: rgba(124, 92, 255, .7);
-
+        border-color: rgba(124, 92, 255, .8);
         background: rgba(124, 92, 255, .06);
-
-        box-shadow:
-            0 0 25px rgba(124, 92, 255, .15);
+        box-shadow: 0 0 25px rgba(124, 92, 255, .18);
     }
 
     body.cursor-hover .cursor-dot {
         box-shadow:
             0 0 10px rgba(124, 92, 255, 1),
             0 0 30px rgba(124, 92, 255, .8);
+    }
+}
+
+/* Hide custom cursor on touch/mobile devices */
+@media (max-width: 850px) {
+    .cursor-dot,
+    .cursor-ring {
+        display: none !important;
     }
 }
 
@@ -3719,12 +3705,4 @@ footer {
     font-variant-numeric: tabular-nums;
     min-width: 1.5em;
     display: inline-block;
-}
-
-@media (min-width: 851px) {
-    .video-project,
-    .video-project video,
-    .video-project * {
-        cursor: none !important;
-    }
 }
