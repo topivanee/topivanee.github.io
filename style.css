@@ -4106,3 +4106,7 @@ footer {
         display: none;
     }
 }
+/* Hide sidebars exclusively on the homepage */
+body.home .side-ui {
+    display: none !important;
+}
