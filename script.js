@@ -372,3 +372,115 @@ document.addEventListener("keydown", event => {
     }
 
 });
+
+/* ==========================================
+   CUSTOM CURSOR
+========================================== */
+
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorRing = document.querySelector(".cursor-ring");
+
+if (cursorDot && cursorRing) {
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let ringX = 0;
+    let ringY = 0;
+
+    document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        cursorDot.style.left = `${mouseX}px`;
+        cursorDot.style.top = `${mouseY}px`;
+    });
+
+    function animateCursor() {
+
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+
+        cursorRing.style.left = `${ringX}px`;
+        cursorRing.style.top = `${ringY}px`;
+
+        requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
+
+
+    /* Enlarge cursor over interactive elements */
+
+    const interactiveElements = document.querySelectorAll(
+        "a, button, .project-card, .game-card, .review, .social-button"
+    );
+
+    interactiveElements.forEach((element) => {
+
+        element.addEventListener("mouseenter", () => {
+            document.body.classList.add("cursor-hover");
+        });
+
+        element.addEventListener("mouseleave", () => {
+            document.body.classList.remove("cursor-hover");
+        });
+
+    });
+}
+
+
+/* ==========================================
+   ANIMATED COUNTERS
+========================================== */
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach((entry) => {
+
+            if (!entry.isIntersecting) return;
+
+            const counter = entry.target;
+
+            const target = Number(counter.dataset.target);
+            const suffix = counter.dataset.suffix || "";
+
+            const duration = 1400;
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                /* Smooth ease-out */
+                const eased = 1 - Math.pow(1 - progress, 3);
+
+                const currentValue = Math.floor(target * eased);
+
+                counter.textContent = currentValue + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target + suffix;
+                }
+            }
+
+            requestAnimationFrame(updateCounter);
+
+            observer.unobserve(counter);
+        });
+
+    },
+    {
+        threshold: 0.5
+    }
+);
+
+counters.forEach((counter) => {
+    counterObserver.observe(counter);
+});
