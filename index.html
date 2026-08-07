@@ -14,7 +14,9 @@
 </head>
 
 <body>
-
+    <!-- CUSTOM CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
     <!-- Background -->
     <div class="background-glow glow-one"></div>
     <div class="background-glow glow-two"></div>
@@ -125,25 +127,19 @@
 
             <div class="hero-stats">
 
-                <div class="hero-stat">
-
-                    <strong>2+</strong>
-
-                    <span>Years scripting</span>
-
-                </div>
+<div class="hero-stat">
+    <strong class="counter" data-target="2" data-suffix="+">0</strong>
+    <span>Years scripting</span>
+</div>
 
 
                 <div class="hero-stat-divider"></div>
 
 
-                <div class="hero-stat">
-
-                    <strong>10+</strong>
-
-                    <span>Projects</span>
-
-                </div>
+<div class="hero-stat">
+    <strong class="counter" data-target="10" data-suffix="+">0</strong>
+    <span>Projects</span>
+</div>
 
 
             </div>
@@ -766,7 +762,13 @@
                             <div class="metric-divider"></div>
                             <div class="metric">
                                 <span class="metric-label">Total Visits</span>
-                                <strong class="metric-value">500+</strong>
+<strong
+    class="metric-value counter"
+    data-target="500"
+    data-suffix="+"
+>
+    0
+</strong>
                             </div>
                         </div>
 
