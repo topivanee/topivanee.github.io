@@ -4106,17 +4106,18 @@ footer {
         display: none;
     }
 }
-/* Hide sidebars exclusively on the homepage */
-/* Hide sidebars by default when a hero/home section is present on the page */
-body:has(#hero) .side-ui,
-body:has(.hero) .side-ui,
-body:has(.homepage) .side-ui {
-    display: none !important;
+/* ==========================================
+   SIDE UI VISIBILITY TOGGLE
+   ========================================== */
+.side-ui {
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50%) translateX(-10px);
 }
 
-/* Show them once the user scrolls down */
-body:has(#hero).scrolled .side-ui,
-body:has(.hero).scrolled .side-ui,
-body:has(.homepage).scrolled .side-ui {
-    display: flex !important;
+.side-ui.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
 }
