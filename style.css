@@ -3108,10 +3108,11 @@ footer {
 
 /* ---------- GRID ---------- */
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+.about-approach-card {
+    grid-column: 1 / -1;
+
+    width: min(100%, 650px);
+    justify-self: center;
 }
 
 
