@@ -485,11 +485,13 @@ counters.forEach((counter) => {
     counterObserver.observe(counter);
 });
 
-/* ==========================================
-   SIDE UI — ACTIVE SECTION
-========================================== */
+// ==========================================
+// SIDE UI — ACTIVE SECTION & VISIBILITY
+// ==========================================
 
+const sideUi = document.querySelector(".side-ui");
 const sideSections = document.querySelectorAll(".side-section");
+const heroSection = document.getElementById("home");
 
 const trackedSections = [
     document.getElementById("work"),
@@ -500,13 +502,22 @@ const trackedSections = [
 ];
 
 function updateSideNavigation() {
-
     const scrollPosition = window.scrollY + window.innerHeight * 0.45;
+    
+    // Hide sidebar if we haven't scrolled past the hero section yet
+    if (heroSection && sideUi) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        if (window.scrollY < heroBottom - 100) {
+            sideUi.classList.remove("visible");
+            return; // Exit early so it doesn't calculate active sections on home page
+        } else {
+            sideUi.classList.add("visible");
+        }
+    }
 
     let activeIndex = 0;
 
     trackedSections.forEach((section, index) => {
-
         if (!section) return;
 
         const sectionTop = section.offsetTop;
@@ -514,7 +525,6 @@ function updateSideNavigation() {
         if (scrollPosition >= sectionTop) {
             activeIndex = index;
         }
-
     });
 
     sideSections.forEach((item, index) => {
@@ -523,7 +533,6 @@ function updateSideNavigation() {
             index === activeIndex
         );
     });
-
 }
 
 window.addEventListener(
@@ -532,4 +541,5 @@ window.addEventListener(
     { passive: true }
 );
 
+// Run on load in case the user refreshes midway down the page
 updateSideNavigation();
