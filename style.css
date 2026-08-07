@@ -3059,3 +3059,543 @@ footer {
         width: 100%;
     }
 }
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about-section {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 140px;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.about-header {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 55px;
+}
+
+.about-header h2 {
+    margin: 18px 0 0;
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+    font-weight: 700;
+    max-width: 900px;
+}
+
+.about-header h2 span {
+    color: rgba(255, 255, 255, 0.28);
+}
+
+.about-intro {
+    max-width: 440px;
+    margin: 0 0 5px auto;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about-intro strong {
+    color: #fff;
+}
+
+
+/* ---------- GRID ---------- */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+
+/* ---------- CARDS ---------- */
+
+.about-profile-card,
+.about-skills-card,
+.about-approach-card,
+.about-quote-card {
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.about-profile-card:hover,
+.about-skills-card:hover,
+.about-approach-card:hover,
+.about-quote-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.18);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025)
+        );
+}
+
+
+/* ---------- CARD TOP ---------- */
+
+.about-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 28px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.about-card-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    color: rgba(255, 255, 255, 0.42);
+    font-weight: 600;
+}
+
+.about-card-number {
+    font-family: monospace;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* ---------- PROFILE ---------- */
+
+.about-profile-card {
+    min-height: 330px;
+}
+
+.about-profile-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 40px 30px 30px;
+}
+
+.about-avatar {
+    flex-shrink: 0;
+
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at 30% 20%,
+            rgba(100, 170, 255, 0.28),
+            transparent 55%
+        ),
+        rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 0 35px rgba(70, 140, 255, 0.08),
+        inset 0 0 30px rgba(255, 255, 255, 0.025);
+}
+
+.about-avatar span {
+    font-family: monospace;
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.about-profile-content h3 {
+    margin: 0 0 10px;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.about-profile-content p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.46);
+    line-height: 1.7;
+    font-size: 0.92rem;
+    max-width: 390px;
+}
+
+.about-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin: 0 30px;
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.78rem;
+}
+
+.green-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #63e6a5;
+
+    box-shadow:
+        0 0 10px rgba(99, 230, 165, 0.7);
+}
+
+
+/* ---------- SKILLS ---------- */
+
+.about-skills-card {
+    min-height: 330px;
+}
+
+.about-skills {
+    padding: 8px 12px 12px;
+}
+
+.about-skill {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.about-skill:hover {
+    background: rgba(255, 255, 255, 0.045);
+    transform: translateX(4px);
+}
+
+.skill-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.about-skill div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    flex: 1;
+}
+
+.about-skill strong {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.about-skill span:not(.skill-arrow) {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.75rem;
+}
+
+.skill-arrow {
+    color: rgba(255, 255, 255, 0.22);
+    font-size: 1rem;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.about-skill:hover .skill-arrow {
+    color: rgba(255, 255, 255, 0.75);
+    transform: translate(2px, -2px);
+}
+
+
+/* ---------- APPROACH ---------- */
+
+.about-approach-card {
+    min-height: 390px;
+}
+
+.approach-list {
+    padding: 8px 28px 25px;
+}
+
+.approach-item {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+
+    padding: 21px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.approach-item:last-child {
+    border-bottom: none;
+}
+
+.approach-item > span {
+    padding-top: 2px;
+
+    font-family: monospace;
+    font-size: 0.68rem;
+
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.approach-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.approach-item p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+
+/* ---------- QUOTE ---------- */
+
+.about-quote-card {
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 38px;
+}
+
+.quote-mark {
+    font-family: Georgia, serif;
+
+    font-size: 5rem;
+    line-height: 0.5;
+
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.about-quote-card h3 {
+    margin: 40px 0;
+
+    max-width: 500px;
+
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.08;
+
+    letter-spacing: -0.04em;
+    font-weight: 500;
+}
+
+.about-quote-card h3 span {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.28);
+}
+
+.quote-line {
+    width: 100%;
+    height: 1px;
+
+    margin-bottom: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.quote-footer {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* ---------- EYEBROW ---------- */
+
+.about-section .eyebrow {
+    display: inline-block;
+
+    font-family: monospace;
+    font-size: 0.7rem;
+
+    letter-spacing: 0.18em;
+
+    color: rgba(255, 255, 255, 0.38);
+}
+
+
+/* ---------- REVEAL ANIMATION ---------- */
+
+.about-section .reveal {
+    opacity: 0;
+    transform: translateY(25px);
+
+    animation: aboutReveal 0.8s ease forwards;
+}
+
+.about-section .about-header {
+    animation-delay: 0.05s;
+}
+
+.about-section .about-profile-card {
+    animation-delay: 0.12s;
+}
+
+.about-section .about-skills-card {
+    animation-delay: 0.2s;
+}
+
+.about-section .about-approach-card {
+    animation-delay: 0.28s;
+}
+
+.about-section .about-quote-card {
+    animation-delay: 0.36s;
+}
+
+@keyframes aboutReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 900px) {
+
+    .about-header {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-intro {
+        margin: 0;
+        max-width: 600px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-profile-card,
+    .about-skills-card,
+    .about-approach-card,
+    .about-quote-card {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-section {
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
+
+    .about-header {
+        margin-bottom: 35px;
+    }
+
+    .about-header h2 {
+        font-size: clamp(2.8rem, 13vw, 4.5rem);
+    }
+
+    .about-profile-content {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 30px 22px 25px;
+    }
+
+    .about-status {
+        margin: 0 22px;
+        padding-bottom: 22px;
+    }
+
+    .about-card-top {
+        padding: 20px 22px;
+    }
+
+    .approach-list {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .about-quote-card {
+        padding: 28px 22px;
+    }
+
+    .about-quote-card h3 {
+        font-size: 2rem;
+        margin: 35px 0;
+    }
+
+    .quote-footer {
+        gap: 20px;
+    }
+
+}
