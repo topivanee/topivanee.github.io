@@ -3694,3 +3694,11 @@ footer {
     min-width: 1.5em;
     display: inline-block;
 }
+
+@media (min-width: 851px) {
+    .video-project,
+    .video-project video,
+    .video-project * {
+        cursor: none !important;
+    }
+}
