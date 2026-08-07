@@ -3706,3 +3706,51 @@ footer {
     min-width: 1.5em;
     display: inline-block;
 }
+
+/* ==========================================
+   BEST WORK BADGE & REORDERING
+   ========================================== */
+
+/* Make the grid use flex or grid order to place best works first */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* Best work cards span slightly larger and feature the badge */
+.project-card.best-work {
+    grid-column: span 2; /* Makes them larger/wider, taking full width of the 2-column grid */
+    transform: scale(1.02);
+    border-color: rgba(124, 92, 255, 0.4);
+}
+
+.project-card.best-work:hover {
+    transform: scale(1.04) translateY(-6px);
+    border-color: rgba(124, 92, 255, 0.7);
+}
+
+/* Badge styling */
+.best-work-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px; /* Placed on top (opposite side of the video tag) */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(124, 92, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(124, 92, 255, 0.4);
+}
+
+.best-work-star {
+    font-size: 10px;
+}
