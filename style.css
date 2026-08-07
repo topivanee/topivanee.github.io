@@ -3600,3 +3600,97 @@ footer {
     }
 
 }
+/* ==========================================
+   CUSTOM CURSOR
+========================================== */
+
+@media (min-width: 851px) {
+
+    body {
+        cursor: none;
+    }
+
+    a,
+    button,
+    .project-card,
+    .game-card {
+        cursor: none;
+    }
+
+    .cursor-dot {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 6px;
+        height: 6px;
+
+        background: white;
+        border-radius: 50%;
+
+        pointer-events: none;
+        z-index: 99999;
+
+        transform: translate(-50%, -50%);
+
+        box-shadow:
+            0 0 8px rgba(124, 92, 255, .9),
+            0 0 20px rgba(124, 92, 255, .6);
+    }
+
+    .cursor-ring {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 34px;
+        height: 34px;
+
+        border: 1px solid rgba(255,255,255,.35);
+        border-radius: 50%;
+
+        pointer-events: none;
+        z-index: 99998;
+
+        transform: translate(-50%, -50%);
+
+        transition:
+            width .25s ease,
+            height .25s ease,
+            border-color .25s ease,
+            background .25s ease;
+
+        backdrop-filter: blur(2px);
+    }
+
+    /* Hover effect */
+
+    body.cursor-hover .cursor-ring {
+        width: 52px;
+        height: 52px;
+
+        border-color: rgba(124, 92, 255, .7);
+
+        background: rgba(124, 92, 255, .06);
+
+        box-shadow:
+            0 0 25px rgba(124, 92, 255, .15);
+    }
+
+    body.cursor-hover .cursor-dot {
+        box-shadow:
+            0 0 10px rgba(124, 92, 255, 1),
+            0 0 30px rgba(124, 92, 255, .8);
+    }
+}
+
+
+/* ==========================================
+   ANIMATED COUNTERS
+========================================== */
+
+.counter {
+    font-variant-numeric: tabular-nums;
+    min-width: 1.5em;
+    display: inline-block;
+}
