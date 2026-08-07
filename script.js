@@ -484,3 +484,52 @@ const counterObserver = new IntersectionObserver(
 counters.forEach((counter) => {
     counterObserver.observe(counter);
 });
+
+/* ==========================================
+   SIDE UI — ACTIVE SECTION
+========================================== */
+
+const sideSections = document.querySelectorAll(".side-section");
+
+const trackedSections = [
+    document.getElementById("work"),
+    document.getElementById("games"),
+    document.getElementById("reviews"),
+    document.getElementById("about"),
+    document.getElementById("contact")
+];
+
+function updateSideNavigation() {
+
+    const scrollPosition = window.scrollY + window.innerHeight * 0.45;
+
+    let activeIndex = 0;
+
+    trackedSections.forEach((section, index) => {
+
+        if (!section) return;
+
+        const sectionTop = section.offsetTop;
+
+        if (scrollPosition >= sectionTop) {
+            activeIndex = index;
+        }
+
+    });
+
+    sideSections.forEach((item, index) => {
+        item.classList.toggle(
+            "active",
+            index === activeIndex
+        );
+    });
+
+}
+
+window.addEventListener(
+    "scroll",
+    updateSideNavigation,
+    { passive: true }
+);
+
+updateSideNavigation();
