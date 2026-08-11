@@ -635,9 +635,8 @@ button {
 
 .reviews-grid {
     display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
+    grid-template-columns: repeat(2, minmax(0, 420px));
+    justify-content: center;
     gap: 18px;
 }
 
@@ -1284,7 +1283,7 @@ footer {
 
     width: 100%;
     height: 100%;
-
+    aspect-ratio: 16 / 9;
     object-fit: cover;
 
     background: #08090b;
@@ -1692,6 +1691,16 @@ footer {
    ========================================== */
 
 @media (max-width: 850px) {
+
+    .project-image {
+        height: 220px;
+    }
+
+    .project-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     .glass-overlay {
         opacity: 1;
@@ -3754,4 +3763,223 @@ footer {
 
 .best-work-star {
     font-size: 10px;
+}
+
+/* ==========================================
+   COLORFUL GLOWS & THEME ENHANCEMENTS
+   ========================================== */
+
+:root {
+    --bg-color: #0c0814;
+    --card-bg: rgba(25, 18, 43, 0.6);
+    --card-border: rgba(147, 51, 234, 0.2);
+    --primary-purple: #8b5cf6;
+    --neon-glow: rgba(139, 92, 246, 0.4);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #e2e8f0;
+}
+
+/* Background vibrant glowing circles */
+.background-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.glow-one {
+    width: 600px;
+    height: 600px;
+    background: rgba(139, 92, 246, 0.15);
+    top: -100px;
+    left: -100px;
+}
+
+.glow-two {
+    width: 500px;
+    height: 500px;
+    background: rgba(168, 85, 247, 0.1);
+    bottom: 20%;
+    right: -100px;
+}
+
+/* Glassmorphism Cards with Purple Borders */
+.project-card, .game-card, .review, .about-profile-card, .about-skills-card, .about-approach-card, .contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .game-card:hover, .contact-card:hover {
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+}
+
+/* Best Work Badge Highlight */
+.best-work-badge {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+}
+
+/* Primary Buttons & Accents */
+.hero-primary-button, .nav-button, .game-link-button {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+    border: 1px solid rgba(216, 180, 254, 0.3);
+}
+
+.hero-primary-button:hover, .nav-button:hover {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.7);
+}
+
+/* Floating Pill Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: auto;
+    max-width: 95%;
+    background: transparent; /* Removes the outer black box */
+    border: none;            /* Removes any lingering borders */
+    padding: 0;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    background: rgba(25, 18, 43, 0.75);
+    border: 1px solid rgba(147, 51, 234, 0.25);
+    backdrop-filter: blur(16px);
+    padding: 8px 12px;
+    border-radius: 9999px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(139, 92, 246, 0.15);
+    gap: 12px;
+}
+
+.nav-profile-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding-left: 4px;
+}
+
+.nav-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-name {
+    font-size: 14px;
+    letter-spacing: -0.2px;
+}
+
+.nav-divider-vertical {
+    width: 1px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ffffff;
+    background: rgba(139, 92, 246, 0.25);
+}
+
+.nav-button {
+    background: #ffffff;
+    color: #0c0814;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-left: 4px;
+}
+
+.nav-button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+/* ==========================================
+   COSMIC DOTS & GRID BACKGROUND
+   ========================================== */
+
+body {
+    background-color: #0c0814;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Dot grid pattern */
+.bg-dots-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(rgba(168, 85, 247, 0.15) 1px, transparent 1px);
+    background-size: 32px 32px;
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Concentric cosmic radar/grid rings */
+.bg-cosmic-rings {
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    border: 1px dashed rgba(147, 51, 234, 0.12);
+    box-shadow: 0 0 100px rgba(139, 92, 246, 0.05), inset 0 0 100px rgba(139, 92, 246, 0.05);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.bg-cosmic-rings::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(168, 85, 247, 0.08);
 }
