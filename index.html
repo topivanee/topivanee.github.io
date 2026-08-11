@@ -840,147 +840,98 @@
 <!-- ABOUT -->
 <section class="section about-section" id="about">
 
+    <div class="section-heading reveal" style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff;">About me</h2>
+    </div>
 
-    <div class="about-grid">
+    <!-- TOP STATS ROW -->
+    <div class="about-stats-row reveal">
+        <div class="about-stat-box">
+            <strong class="stat-number">2+</strong>
+            <span class="stat-label">YEARS SCRIPTING</span>
+        </div>
 
-        <!-- MAIN PROFILE CARD -->
-        <div class="about-profile-card reveal">
+        <div class="about-stat-box">
+            <strong class="stat-number">10+</strong>
+            <span class="stat-label">PROJECTS</span>
+        </div>
 
-            <div class="about-card-top">
-                <span class="about-card-label">WHO I AM</span>
-                <span class="about-card-number">01</span>
-            </div>
+        <div class="about-stat-box">
+            <strong class="stat-number">5+</strong>
+            <span class="stat-label">HAPPY CLIENTS</span>
+        </div>
+    </div>
 
-            <div class="about-profile-content">
-                <div class="about-avatar">
-                    <span>&lt;/&gt;</span>
-                </div>
+    <!-- LOWER CONTENT GRID (BIO + TECH STACK) -->
+    <div class="about-lower-grid reveal">
+        
+        <!-- Left Bio Text -->
+        <div class="about-bio-content">
+            <p>
+                Hey, I'm <strong>Ivane</strong>. I've been scripting Roblox for about <strong>2 years</strong> now, everything from late night passion projects to studio jobs with real players on the line.
+            </p>
+            <p>
+                I do the whole stack. UI that feels right to use, and backend that doesn't fall over when a thousand people log in at once. Mostly people hire me to make the hard systems behave.
+            </p>
+            <p>
+                Clean code, honest timelines, no drama. And code your team can still read after I'm gone.
+            </p>
 
-                <div>
-                    <h3>Roblox Systems Developer</h3>
-
-                    <p>
-                        I specialize in creating gameplay systems that are
-                        structured, maintainable, and built with
-                        performance in mind.
-                    </p>
-                </div>
-            </div>
-
-            <div class="about-status">
-                <span class="green-dot"></span>
-                Available for commissions
-                
-                <span class="green-dot"></span>
-                Available for Long-Term
+            <!-- Bottom Feature Pills -->
+            <div class="about-trait-pills">
+                <span class="trait-pill">Flexible Hours</span>
+                <span class="trait-pill">Happy to Sign an NDA</span>
+                <span class="trait-pill">You Keep the Source</span>
+                <span class="trait-pill">Support After Launch</span>
             </div>
         </div>
 
+       <!-- Right Tech Stack Card -->
+<div class="about-tech-card">
+    <div class="tech-card-header">
+        <div class="tech-card-icon">&lt;/&gt;</div>
+        <div>
+            <strong>Tech Stack</strong>
+            <span>What I reach for daily</span>
+        </div>
+    </div>
 
-        <!-- SKILLS -->
-        <div class="about-skills-card reveal">
-
-            <div class="about-card-top">
-                <span class="about-card-label">WHAT I BUILD</span>
-                <span class="about-card-number">02</span>
-            </div>
-
-            <div class="about-skills">
-
-                <div class="about-skill">
-                    <div class="skill-icon">&lt;/&gt;</div>
-
-                    <div>
-                        <strong>Gameplay Systems</strong>
-                        <span>Mechanics, towers, enemies & more</span>
-                    </div>
-
-                    <span class="skill-arrow">↗</span>
-                </div>
-
-                <div class="about-skill">
-                    <div class="skill-icon">◈</div>
-
-                    <div>
-                        <strong>Server Architecture</strong>
-                        <span>Modular & scalable systems</span>
-                    </div>
-
-                    <span class="skill-arrow">↗</span>
-                </div>
-
-                <div class="about-skill">
-                    <div class="skill-icon">↔</div>
-
-                    <div>
-                        <strong>Networking</strong>
-                        <span>Client ↔ server communication</span>
-                    </div>
-
-                    <span class="skill-arrow">↗</span>
-                </div>
-
-                <div class="about-skill">
-                    <div class="skill-icon">◇</div>
-
-                    <div>
-                        <strong>Security</strong>
-                        <span>Server-authoritative systems</span>
-                    </div>
-
-                    <span class="skill-arrow">↗</span>
-                </div>
-
-            </div>
-
+    <!-- Single Marquee Track per row -->
+    <div class="tech-marquee-container">
+        <!-- Top Row (Moves Left) -->
+        <div class="marquee-track marquee-left">
+            <span class="tech-tag"><span class="dot yellow"></span> Wally</span>
+            <span class="tech-tag"><span class="dot purple"></span> Knit</span>
+            <span class="tech-tag"><span class="dot green"></span> Matter ECS</span>
+            <span class="tech-tag"><span class="dot green"></span> ProfileService</span>
+            <span class="tech-tag"><span class="dot purple"></span> Fusion</span>
+            <!-- Duplicate items inside the same track for seamless loop -->
+            <span class="tech-tag"><span class="dot yellow"></span> Wally</span>
+            <span class="tech-tag"><span class="dot purple"></span> Knit</span>
+            <span class="tech-tag"><span class="dot green"></span> Matter ECS</span>
+            <span class="tech-tag"><span class="dot green"></span> ProfileService</span>
+            <span class="tech-tag"><span class="dot purple"></span> Fusion</span>
         </div>
 
-
-        <!-- APPROACH -->
-        <div class="about-approach-card reveal">
-
-            <div class="about-card-top">
-                <span class="about-card-label">MY APPROACH</span>
-                <span class="about-card-number">03</span>
-            </div>
-
-            <div class="approach-list">
-
-                <div class="approach-item">
-                    <span>01</span>
-                    <div>
-                        <strong>Understand</strong>
-                        <p>Break the idea into the systems it actually needs.</p>
-                    </div>
-                </div>
-
-                <div class="approach-item">
-                    <span>02</span>
-                    <div>
-                        <strong>Build</strong>
-                        <p>Create clean and organized architecture.</p>
-                    </div>
-                </div>
-
-                <div class="approach-item">
-                    <span>03</span>
-                    <div>
-                        <strong>Test</strong>
-                        <p>Find edge cases, exploits and performance issues.</p>
-                    </div>
-                </div>
-
-                <div class="approach-item">
-                    <span>04</span>
-                    <div>
-                        <strong>Refine</strong>
-                        <p>Polish the system and make it easier to expand.</p>
-                    </div>
-                </div>
-
-            </div>
-
+        <!-- Bottom Row (Moves Right) -->
+        <div class="marquee-track marquee-right">
+            <span class="tech-tag"><span class="dot red"></span> roblox-ts</span>
+            <span class="tech-tag"><span class="dot red"></span> Rojo</span>
+            <span class="tech-tag"><span class="dot blue"></span> TypeScript</span>
+            <span class="tech-tag"><span class="dot blue"></span> Luau</span>
+            <span class="tech-tag"><span class="dot blue"></span> Janitor</span>
+            <span class="tech-tag"><span class="dot purple"></span> Promise</span>
+            <!-- Duplicate items inside the same track for seamless loop -->
+            <span class="tech-tag"><span class="dot red"></span> roblox-ts</span>
+            <span class="tech-tag"><span class="dot red"></span> Rojo</span>
+            <span class="tech-tag"><span class="dot blue"></span> TypeScript</span>
+            <span class="tech-tag"><span class="dot blue"></span> Luau</span>
+            <span class="tech-tag"><span class="dot blue"></span> Janitor</span>
+            <span class="tech-tag"><span class="dot purple"></span> Promise</span>
         </div>
+    </div>
+</div>
+    </div>
 
 </section>
 
