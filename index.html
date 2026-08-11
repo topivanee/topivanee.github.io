@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <!-- Background Grid and Glow Elements -->
+<div class="bg-dots-pattern"></div>
+<div class="bg-cosmic-rings"></div>
     <!-- CUSTOM CURSOR -->
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
@@ -23,27 +26,35 @@
 
 <!-- Navigation -->
     <header class="navbar">
-        <a href="#home" class="logo">Ivane<span>.</span></a>
+        <div class="nav-container">
+            <!-- Left Logo / Avatar Group -->
+            <a href="#home" class="nav-profile-group">
+                <img src="images/MYpicture.png" alt="Ivane" class="nav-avatar">
+                <span class="nav-name">Ivane</span>
+            </a>
 
-        <nav>
-            <a href="#work">Work</a>
-            <a href="#games">Games</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <div class="nav-divider-vertical"></div>
 
-        <a href="#contact" class="nav-button">
-            Hire Me
-            <span>↗</span>
-        </a>
+            <!-- Central Links -->
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Right CTA Button -->
+            <a href="#contact" class="nav-button">
+                Hire Me <span>></span>
+            </a>
+        </div>
 
         <button class="mobile-menu" id="mobileMenu">
             <span></span>
             <span></span>
         </button>
     </header>
-
 
     <main>
 
