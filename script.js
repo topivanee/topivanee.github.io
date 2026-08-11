@@ -484,3 +484,37 @@ const counterObserver = new IntersectionObserver(
 counters.forEach((counter) => {
     counterObserver.observe(counter);
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section");
+
+    // 1. Click to highlight immediately
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            navLinks.forEach(item => item.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+
+    // 2. Automatically update highlight as you scroll through sections
+    window.addEventListener("scroll", () => {
+        let current = "";
+        const scrollPosition = window.scrollY + 200;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+        });
+    });
+});
