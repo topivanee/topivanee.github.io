@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ivane — Roblox Developer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Grid and Glow Elements -->
+    <div class="bg-dots-pattern"></div>
+    <div class="bg-cosmic-rings"></div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Background -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- GLOBAL MOUSE GLOW -->
+    <div
+        class="hero-mouse-glow"
+        id="heroMouseGlow"
+    ></div>
+
+
+   <header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="nav-profile-group">
+
+            <img
+                src="images/MYpicture.png"
+                alt="Ivane"
+                class="nav-avatar"
+            >
+
+            <span class="nav-name">
+                Ivane
+            </span>
+
+        </a>
+
+
+        <span class="nav-divider"></span>
+
+
+        <nav class="nav-links">
+
+            <a href="#home" class="nav-link active">
+                Home
+            </a>
+
+            <a href="#work" class="nav-link">
+                Work
+            </a>
+
+            <a href="#games" class="nav-link">
+                Games
+            </a>
+
+            <a href="#reviews" class="nav-link">
+                Reviews
+            </a>
+
+            <a href="#about" class="nav-link">
+                About
+            </a>
+
+            <a href="#contact" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <span class="nav-divider"></span>
+
+
+        <a href="#contact" class="nav-button">
+
+            Hire Me
+
+            <span>
+                ↗
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HOME / HERO
+             ========================================== -->
+
+        <section class="hero hero-three-layout" id="home">
+
+            <div class="hero-three-grid">
+
+                <!-- =====================================
+                     LEFT — PARTICLE FISH
+                ====================================== -->
+
+                <div class="hero-particle-side reveal">
+
+                    <div class="particle-visual">
+
+                        <canvas
+                            id="dotCharacter"
+                            class="dot-character"
+                            aria-label="Animated particle fish"
+                        ></canvas>
+
+                        <div class="particle-ring particle-ring-one"></div>
+                        <div class="particle-ring particle-ring-two"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     CENTER — TEXT
+                ====================================== -->
+
+                <div class="hero-center-copy reveal">
+
+                    <div class="hero-top-pill">
+
+                        <span class="hero-top-dot"></span>
+
+                        <span>
+                            ROBLOX DEVELOPER
+                        </span>
+
+                        <span class="hero-top-separator"></span>
+
+                        <span>
+                            AVAILABLE
+                        </span>
+
+                    </div>
+
+
+                    <span class="hero-center-eyebrow">
+                        LUAU • SYSTEMS • GAMEPLAY
+                    </span>
+
+
+                    <h1 class="hero-title">
+
+                        I'M IVANE.
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        I build scalable gameplay systems,
+                        optimized mechanics, and polished Roblox experiences.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#work"
+                            class="hero-primary-button"
+                        >
+
+                            <span>
+                                Explore my work
+                            </span>
+
+                            <span class="button-icon">
+                                ↓
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="#contact"
+                            class="hero-secondary-button"
+                        >
+
+                            <span>
+                                Let's work together
+                            </span>
+
+                            <span class="button-icon">
+                                ↗
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     RIGHT — PORTRAIT / ORBIT CARD
+                ====================================== -->
+
+                <div class="hero-right-visual reveal">
+
+                    <div
+                        class="hero-orbit-stage"
+                        id="heroOrbitStage"
+                    >
+
+                        <div class="hero-stage-grid"></div>
+
+                        <div
+                            class="
+                                hero-orbit
+                                hero-orbit-main
+                            "
+                        >
+                            <span
+                                class="hero-orbit-satellite"
+                            ></span>
+                        </div>
+
+                        <div
+                            class="
+                                hero-orbit
+                                hero-orbit-secondary
+                            "
+                        >
+                            <span
+                                class="
+                                    hero-orbit-satellite
+                                    satellite-two
+                                "
+                            ></span>
+                        </div>
+
+                        <div
+                            class="
+                                hero-orbit
+                                hero-orbit-inner
+                            "
+                        ></div>
+
+
+                        <div
+                            class="hero-profile-card"
+                            id="heroProfileCard"
+                        >
+
+                            <div class="hero-profile-glow"></div>
+
+                            <img
+                                src="images/MYpicture.png"
+                                alt="Ivane"
+                                class="hero-profile-image"
+                            >
+
+                            <div class="hero-profile-shade"></div>
+
+                            <div
+                                class="
+                                    hero-profile-corner
+                                    corner-one
+                                "
+                            ></div>
+
+                            <div
+                                class="
+                                    hero-profile-corner
+                                    corner-two
+                                "
+                            ></div>
+
+                            <div
+                                class="
+                                    hero-profile-corner
+                                    corner-three
+                                "
+                            ></div>
+
+                            <div
+                                class="
+                                    hero-profile-corner
+                                    corner-four
+                                "
+                            ></div>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                hero-floating-chip
+                                hero-chip-system
+                            "
+                        >
+
+                            <span class="chip-number">
+                                01
+                            </span>
+
+                            <span>
+                                SYSTEM.READY
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                hero-floating-chip
+                                hero-chip-build
+                            "
+                        >
+
+                            <span class="chip-live-dot"></span>
+
+                            <span>
+                                BUILDING IN ROBLOX STUDIO
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-scroll-mark">
+
+                <span>
+                    SCROLL
+                </span>
+
+                <i></i>
+
+            </div>
+
+        </section>
+
+
+     <!-- ==========================================
+     WORK
+========================================== -->
+
+<section class="section work-section" id="work">
+
+    <div class="section-heading reveal">
+        <div>
+            <span class="eyebrow">01 / WORK</span>
+            <h2>Selected work.</h2>
+        </div>
+
+        <p>
+            Gameplay systems, backend architecture,
+            mechanics and experiments built for Roblox.
+        </p>
+    </div>
+
+    <div class="work-showcase">
+
+        <!-- FEATURED -->
+        <article class="project-card work-card work-featured reveal">
+
+            <div class="work-media video-project">
+
+                <video
+                    class="project-video"
+                    src="videos/WeatherController.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                ></video>
+
+                <div class="work-video-shade"></div>
+
+                <div class="work-media-top">
+                    <span class="work-featured-badge">★ FEATURED</span>
+                    <span class="work-category">SYSTEM</span>
+                </div>
+
+                <div class="work-media-bottom">
+                    <span>01</span>
+                    <span class="work-preview-text">LIVE PREVIEW</span>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Open Weather System video"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="work-copy work-featured-copy">
+
+                <div>
+                    <span class="work-small-label">ROBLOX / SYSTEM</span>
+
+                    <h3>Weather System</h3>
+
+                    <p>
+                        Dynamic weather controller featuring rain,
+                        clouds, fog, sunny conditions and thunderstorms.
+                    </p>
+
+                    <div class="work-tech">
+                        <span>Luau</span>
+                        <span>Lighting</span>
+                        <span>Particles</span>
+                        <span>RunService</span>
+                    </div>
+                </div>
+
+                <button
+                    class="work-open project-arrow"
+                    type="button"
+                    aria-label="View Weather System"
+                >
+                    ↗
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- RIGHT GRID -->
+        <div class="work-side-grid">
+
+            <!-- ANTI CHEAT -->
+            <article class="project-card work-card work-small reveal">
+
+                <div class="work-media video-project">
+
+                    <video
+                        class="project-video"
+                        src="videos/AntiCheatSystem.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+                    <div class="work-video-shade"></div>
+
+                    <div class="work-media-top">
+                        <span class="work-index">02</span>
+                        <span class="work-category">SECURITY</span>
+                    </div>
+
+                    <button
+                        class="play-button"
+                        type="button"
+                        aria-label="Open Anti-Cheat video"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+                <div class="work-copy">
+
+                    <div>
+                        <span class="work-small-label">ROBLOX / SECURITY</span>
+                        <h3>Advanced Anti-Cheat</h3>
+
+                        <p>
+                            Server-authoritative exploit detection
+                            and validation.
+                        </p>
+                    </div>
+
+                    <button
+                        class="work-open project-arrow"
+                        type="button"
+                        aria-label="View Advanced Anti-Cheat"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOWER DEFENSE -->
+            <article class="project-card work-card work-small reveal">
+
+                <div class="work-media video-project">
+
+                    <video
+                        class="project-video"
+                        src="videos/TowerDefense.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+                    <div class="work-video-shade"></div>
+
+                    <div class="work-media-top">
+                        <span class="work-index">03</span>
+                        <span class="work-category">GAMEPLAY</span>
+                    </div>
+
+                    <button
+                        class="play-button"
+                        type="button"
+                        aria-label="Open Tower Defense video"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+                <div class="work-copy">
+
+                    <div>
+                        <span class="work-small-label">ROBLOX / GAMEPLAY</span>
+                        <h3>Tower Defense</h3>
+
+                        <p>
+                            Placement, targeting, waves,
+                            enemies and upgrades.
+                        </p>
+                    </div>
+
+                    <button
+                        class="work-open project-arrow"
+                        type="button"
+                        aria-label="View Tower Defense"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- GUESS CHARACTER -->
+            <article class="project-card work-card work-small reveal">
+
+                <div class="work-media video-project">
+
+                    <video
+                        class="project-video"
+                        src="videos/GUESSTHECHAR.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+                    <div class="work-video-shade"></div>
+
+                    <div class="work-media-top">
+                        <span class="work-index">04</span>
+                        <span class="work-category">GAMEPLAY</span>
+                    </div>
+
+                    <button
+                        class="play-button"
+                        type="button"
+                        aria-label="Open Guess The Character video"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+                <div class="work-copy">
+
+                    <div>
+                        <span class="work-small-label">ROBLOX / GAME</span>
+                        <h3>Guess The Character</h3>
+
+                        <p>
+                            Clue-based game logic with responsive
+                            UI interactions.
+                        </p>
+                    </div>
+
+                    <button
+                        class="work-open project-arrow"
+                        type="button"
+                        aria-label="View Guess The Character"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- SPINNER -->
+            <article class="project-card work-card work-small reveal">
+
+                <div class="work-media video-project">
+
+                    <video
+                        class="project-video"
+                        src="videos/Spinner.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+                    <div class="work-video-shade"></div>
+
+                    <div class="work-media-top">
+                        <span class="work-index">05</span>
+                        <span class="work-category">SYSTEM</span>
+                    </div>
+
+                    <button
+                        class="play-button"
+                        type="button"
+                        aria-label="Open Spinner video"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+                <div class="work-copy">
+
+                    <div>
+                        <span class="work-small-label">ROBLOX / SYSTEM</span>
+                        <h3>Spinner Randomizer</h3>
+
+                        <p>
+                            Weighted rarity spinner with
+                            smooth result animations.
+                        </p>
+                    </div>
+
+                    <button
+                        class="work-open project-arrow"
+                        type="button"
+                        aria-label="View Spinner Randomizer"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <!-- HIDDEN WORK -->
+    <div class="work-more" id="workMore">
+
+        <!-- JUNKYARD -->
+        <article class="project-card work-card work-extra-card">
+
+            <div class="work-media video-project">
+
+                <video
+                    class="project-video"
+                    src="videos/RarityBasedSpawn.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                ></video>
+
+                <div class="work-video-shade"></div>
+
+                <div class="work-media-top">
+                    <span class="work-index">06</span>
+                    <span class="work-category">SYSTEM</span>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Open JunkYard video"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="work-copy">
+                <div>
+                    <span class="work-small-label">ROBLOX / SYSTEM</span>
+                    <h3>JunkYard</h3>
+
+                    <p>
+                        Rarity and chance-based vehicle spawning system.
+                    </p>
+                </div>
+
+                <button
+                    class="work-open project-arrow"
+                    type="button"
+                    aria-label="View JunkYard"
+                >
+                    ↗
+                </button>
+            </div>
+
+        </article>
+
+
+        <!-- BUILD ANIMATION -->
+        <article class="project-card work-card work-extra-card">
+
+            <div class="work-media video-project">
+
+                <video
+                    class="project-video"
+                    src="videos/SimpleBuildAnimation.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                ></video>
+
+                <div class="work-video-shade"></div>
+
+                <div class="work-media-top">
+                    <span class="work-index">07</span>
+                    <span class="work-category">ANIMATION</span>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Open Build Animation video"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="work-copy">
+                <div>
+                    <span class="work-small-label">ROBLOX / SYSTEM</span>
+                    <h3>Build Animation</h3>
+
+                    <p>
+                        Smooth procedural model building animation.
+                    </p>
+                </div>
+
+                <button
+                    class="work-open project-arrow"
+                    type="button"
+                    aria-label="View Build Animation"
+                >
+                    ↗
+                </button>
+            </div>
+
+        </article>
+
+
+        <!-- NPC -->
+        <article class="project-card work-card work-extra-card">
+
+            <div class="work-media video-project">
+
+                <video
+                    class="project-video"
+                    src="videos/NPCAI.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                ></video>
+
+                <div class="work-video-shade"></div>
+
+                <div class="work-media-top">
+                    <span class="work-index">08</span>
+                    <span class="work-category">AI</span>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Open NPC AI video"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="work-copy">
+                <div>
+                    <span class="work-small-label">ROBLOX / AI</span>
+                    <h3>NPC AI System</h3>
+
+                    <p>
+                        Pathfinding, detection, chasing and
+                        server-side NPC behavior.
+                    </p>
+                </div>
+
+                <button
+                    class="work-open project-arrow"
+                    type="button"
+                    aria-label="View NPC AI System"
+                >
+                    ↗
+                </button>
+            </div>
+
+        </article>
+
+
+        <!-- MAP SELECTOR -->
+        <article class="project-card work-card work-extra-card">
+
+            <div class="work-media video-project">
+
+                <video
+                    class="project-video"
+                    src="videos/MapTeleport.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                ></video>
+
+                <div class="work-video-shade"></div>
+
+                <div class="work-media-top">
+                    <span class="work-index">09</span>
+                    <span class="work-category">SYSTEM</span>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Open Map Selector video"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="work-copy">
+                <div>
+                    <span class="work-small-label">ROBLOX / SYSTEM</span>
+                    <h3>Map Selector</h3>
+
+                    <p>
+                        Interactive map selection and teleport system.
+                    </p>
+                </div>
+
+                <button
+                    class="work-open project-arrow"
+                    type="button"
+                    aria-label="View Map Selector"
+                >
+                    ↗
+                </button>
+            </div>
+
+        </article>
+
+
+        <!-- TRUCK -->
+        <article class="project-card work-card work-extra-card">
+
+            <div class="work-media video-project">
+
+                <video
+                    class="project-video"
+                    src="videos/TruckATrailer.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                ></video>
+
+                <div class="work-video-shade"></div>
+
+                <div class="work-media-top">
+                    <span class="work-index">10</span>
+                    <span class="work-category">VEHICLES</span>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Open Truck & Trailer video"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="work-copy">
+                <div>
+                    <span class="work-small-label">ROBLOX / VEHICLES</span>
+                    <h3>Truck & Trailer</h3>
+
+                    <p>
+                        Dynamic truck and trailer connection system.
+                    </p>
+                </div>
+
+                <button
+                    class="work-open project-arrow"
+                    type="button"
+                    aria-label="View Truck & Trailer"
+                >
+                    ↗
+                </button>
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- VIEW MORE -->
+    <div class="work-more-wrapper">
+
+        <button
+            class="work-more-button"
+            id="workToggle"
+            type="button"
+            aria-expanded="false"
+        >
+            <span id="workToggleText">View more work</span>
+            <span class="work-more-count">+5</span>
+            <span class="work-more-arrow">↓</span>
+        </button>
+
+    </div>
+
+</section>
+
+
+        <!-- ==========================================
+             PROJECTS & RELEASED GAMES
+             ========================================== -->
+
+        <section
+            class="section games-section"
+            id="games"
+        >
+
+
+            <div class="section-heading reveal">
+
+
+                <div>
+
+                    <span class="eyebrow">
+                        02 / GAMES & EXPERIENCES
+                    </span>
+
+                    <h2>
+                        Released games
+                    </h2>
+
+                </div>
+
+
+                <p>
+
+                    Released Roblox experiences built with
+                    optimized systems, showcasing polished
+                    gameplay and total visits.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="games-grid">
+
+
+                <!-- GAME 1 -->
+
+                <article class="game-card reveal">
+
+
+                    <div class="game-image-wrapper">
+
+
+                        <img
+                            src="images/LastDelivery.png"
+                            alt="Last Delivery thumbnail"
+                            class="game-thumbnail"
+                        >
+
+
+                        <div class="game-badge">
+
+                            <span class="live-dot"></span>
+
+                            LIVE
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="game-info">
+
+
+                        <div>
+
+                            <span class="game-tag">
+                                Roblox / Simulation
+                            </span>
+
+                            <h3>
+                                Last Delivery
+                            </h3>
+
+                            <p>
+
+                                A newly released solo-built Roblox
+                                experience focused on polished
+                                gameplay systems.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="game-metrics">
+
+
+                            <div class="metric">
+
+                                <span class="metric-label">
+                                    CCU (Active)
+                                </span>
+
+                                <strong class="metric-value">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="metric-divider"></div>
+
+
+                            <div class="metric">
+
+                                <span class="metric-label">
+                                    Total Visits
+                                </span>
+
+                                <strong
+                                    class="metric-value counter"
+                                    data-target="1000"
+                                    data-suffix="+"
+                                >
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <a
+                            href="https://www.roblox.com/games/101472206351816/The-Last-Delivery"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="game-link-button"
+                        >
+
+                            <span>
+                                Play Experience
+                            </span>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             VIDEO MODAL
+             ========================================== -->
+
+        <div
+            class="video-modal"
+            id="videoModal"
+        >
+
+
+            <div class="modal-backdrop"></div>
+
+
+            <div class="modal-content">
+
+
+                <button
+                    class="modal-close"
+                    id="modalClose"
+                    type="button"
+                >
+                    ×
+                </button>
+
+
+                <video
+                    id="expandedVideo"
+                    controls
+                    playsinline
+                ></video>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <section
+    class="section reviews-section"
+    id="reviews"
+>
+
+    <div class="reviews-heading reveal">
+
+        <span class="eyebrow">
+            03 / REVIEWS
+        </span>
+
+        <h2>
+            What people say.
+        </h2>
+
+        <p>
+            Feedback from clients I've worked with
+            on Roblox projects.
+        </p>
+
+    </div>
+
+
+    <div class="reviews-new-grid">
+
+
+        <!-- REVIEW 1 -->
+
+        <article class="review-new reveal">
+
+            <div class="review-new-top">
+
+                <div class="review-user">
+
+                    <img
+                        src="images/review1.png"
+                        alt="A.y.c.e"
+                        class="review-new-avatar"
+                    >
+
+                    <div>
+
+                        <strong>
+                            A.y.c.e
+                        </strong>
+
+                        <span>
+                            Verified client
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="review-rating">
+
+                    <strong>
+                        5.0
+                    </strong>
+
+                    <span>
+                        / 5
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-stars-new">
+                ★★★★★
+            </div>
+
+
+            <p class="review-new-text">
+
+                Ivane was really easy to work with
+                and understood exactly what I needed.
+
+            </p>
+
+
+            <div class="review-new-footer">
+
+                <span class="verified-icon">
+                    ✓
+                </span>
+
+                <span>
+                    Verified
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- REVIEW 2 -->
+
+        <article class="review-new reveal">
+
+            <div class="review-new-top">
+
+                <div class="review-user">
+
+                    <img
+                        src="images/review2.png"
+                        alt="Momhouse"
+                        class="review-new-avatar"
+                    >
+
+                    <div>
+
+                        <strong>
+                            Momhouse
+                        </strong>
+
+                        <span>
+                            Verified client
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="review-rating">
+
+                    <strong>
+                        5.0
+                    </strong>
+
+                    <span>
+                        / 5
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-stars-new">
+                ★★★★★
+            </div>
+
+
+            <p class="review-new-text">
+
+                Ivane is a nice person,
+                and always delivers on time.
+
+            </p>
+
+
+            <div class="review-new-footer">
+
+                <span class="verified-icon">
+                    ✓
+                </span>
+
+                <span>
+                    Verified
+                </span>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+        <!-- ==========================================
+             ABOUT
+             ========================================== -->
+
+        <section
+            class="section about-section"
+            id="about"
+        >
+
+
+            <div
+                class="section-heading reveal about-section-heading"
+                style="text-align: center; margin-bottom: 50px;"
+            >
+
+
+                <div>
+
+                    <span class="eyebrow">
+                        04 / ABOUT
+                    </span>
+
+                    <h2
+                        style="
+                            font-size: 2.5rem;
+                            font-weight: 800;
+                            color: #ffffff;
+                        "
+                    >
+                        About me
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TOP STATS ROW -->
+
+            <div class="about-stats-row reveal">
+
+
+                <div class="about-stat-box">
+
+                    <strong class="stat-number">
+                        2+
+                    </strong>
+
+                    <span class="stat-label">
+                        YEARS SCRIPTING
+                    </span>
+
+                </div>
+
+
+
+                <div class="about-stat-box">
+
+                    <strong class="stat-number">
+                        10+
+                    </strong>
+
+                    <span class="stat-label">
+                        PROJECTS
+                    </span>
+
+                </div>
+
+
+
+                <div class="about-stat-box">
+
+                    <strong class="stat-number">
+                        5+
+                    </strong>
+
+                    <span class="stat-label">
+                        HAPPY CLIENTS
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- LOWER CONTENT GRID -->
+
+            <div class="about-lower-grid reveal">
+
+
+                <!-- Left Bio Text -->
+
+                <div class="about-bio-content">
+
+
+                    <p>
+
+                        Hey, I'm <strong>Ivane</strong>.
+                        I've been scripting Roblox for about
+                        <strong>2 years</strong> now,
+                        everything from late night passion
+                        projects to studio jobs with real
+                        players on the line.
+
+                    </p>
+
+
+                    <p>
+
+                        I do the whole stack. UI that feels
+                        right to use, and backend that
+                        doesn't fall over when a thousand
+                        people log in at once. Mostly people
+                        hire me to make the hard systems behave.
+
+                    </p>
+
+
+                    <p>
+
+                        Clean code, honest timelines, no drama.
+                        And code your team can still read
+                        after I'm gone.
+
+                    </p>
+
+
+
+                    <!-- Bottom Feature Pills -->
+
+                    <div class="about-trait-pills">
+
+                        <span class="trait-pill">
+                            Flexible Hours
+                        </span>
+
+                        <span class="trait-pill">
+                            Happy to Sign an NDA
+                        </span>
+
+                        <span class="trait-pill">
+                            You Keep the Source
+                        </span>
+
+                        <span class="trait-pill">
+                            Support After Launch
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Right Tech Stack Card -->
+
+                <div class="about-tech-card">
+
+
+                    <div class="tech-card-header">
+
+
+                        <div class="tech-card-icon">
+                            &lt;/&gt;
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Tech Stack
+                            </strong>
+
+                            <span>
+                                What I reach for daily
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="tech-marquee-container">
+
+
+                        <!-- Top Row -->
+
+                        <div class="marquee-track marquee-left">
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot yellow"></span>
+
+                                Wally
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot purple"></span>
+
+                                Knit
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot green"></span>
+
+                                Matter ECS
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot green"></span>
+
+                                ProfileService
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot purple"></span>
+
+                                Fusion
+
+                            </span>
+
+
+
+                            <!-- Duplicate for seamless loop -->
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot yellow"></span>
+
+                                Wally
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot purple"></span>
+
+                                Knit
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot green"></span>
+
+                                Matter ECS
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot green"></span>
+
+                                ProfileService
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot purple"></span>
+
+                                Fusion
+
+                            </span>
+
+
+                        </div>
+
+
+
+                        <!-- Bottom Row -->
+
+                        <div class="marquee-track marquee-right">
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot red"></span>
+
+                                roblox-ts
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot red"></span>
+
+                                Rojo
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot blue"></span>
+
+                                TypeScript
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot blue"></span>
+
+                                Luau
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot blue"></span>
+
+                                Janitor
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot purple"></span>
+
+                                Promise
+
+                            </span>
+
+
+
+                            <!-- Duplicate for seamless loop -->
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot red"></span>
+
+                                roblox-ts
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot red"></span>
+
+                                Rojo
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot blue"></span>
+
+                                TypeScript
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot blue"></span>
+
+                                Luau
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot blue"></span>
+
+                                Janitor
+
+                            </span>
+
+
+                            <span class="tech-tag">
+
+                                <span class="dot purple"></span>
+
+                                Promise
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             CONTACT
+             ========================================== -->
+
+        <section
+            class="section contact-section"
+            id="contact"
+        >
+
+
+            <div class="contact-card reveal">
+
+
+                <span class="eyebrow">
+                    05 / CONTACT
+                </span>
+
+
+
+                <h2>
+
+                    Let's build
+
+                    <br>
+
+                    something <span>great.</span>
+
+                </h2>
+
+
+
+                <p>
+
+                    Have a Roblox project that needs scripting?
+                    Send me a message or check out my code
+                    and profile below.
+
+                </p>
+
+
+
+                <div class="contact-buttons-wrapper">
+
+
+                    <button
+                        class="discord-button"
+                        id="discordButton"
+                    >
+
+                        <span class="discord-icon">
+                            ◉
+                        </span>
+
+                        Message me on Discord
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </button>
+
+
+
+                    <a
+                        href="https://github.com/topivanee"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-button"
+                    >
+
+                        <span class="social-icon">
+                            &lt;/&gt;
+                        </span>
+
+                        GitHub Profile
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+
+                    <a
+                        href="https://www.roblox.com/users/1895991934/profile"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-button"
+                    >
+
+                        <span class="social-icon">
+                            ☲
+                        </span>
+
+                        Roblox Profile
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="contact-note">
+
+                    <span class="green-dot"></span>
+
+                    Usually responds within a few hours
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+            Ivane<span>.</span>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <a href="#work">
+                Work
+            </a>
+
+            <a href="#reviews">
+                Reviews
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="copyright">
+
+            © 2026 Ivane. All rights reserved.
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- Toast -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+
+        Discord username copied!
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
